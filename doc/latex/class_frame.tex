@@ -1,0 +1,280 @@
+\hypertarget{class_frame}{}\section{Frame Class Reference}
+\label{class_frame}\index{Frame@{Frame}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_frame_ad2e5946cf41d4817e750500acf05d02b}{Frame} ()\hypertarget{class_frame_ad2e5946cf41d4817e750500acf05d02b}{}\label{class_frame_ad2e5946cf41d4817e750500acf05d02b}
+
+\begin{DoxyCompactList}\small\item\em Default ctor. \end{DoxyCompactList}\item 
+\hyperlink{class_frame_a3aaef68e216ad9eb4f66a011e95ca79d}{Frame} (const unsigned int \&\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Ctor. \end{DoxyCompactList}\item 
+\hyperlink{class_frame_abec8c7bccdfc88cb4da137caae9f73d6}{$\sim$\+Frame} ()\hypertarget{class_frame_abec8c7bccdfc88cb4da137caae9f73d6}{}\label{class_frame_abec8c7bccdfc88cb4da137caae9f73d6}
+
+\begin{DoxyCompactList}\small\item\em Dtor. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_frame_a09d802e0d0334639af5f2c722a6b01b4}{Get\+Frame\+ID} () const
+\begin{DoxyCompactList}\small\item\em Get frame id. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_frame_ac84074496370db74643c16d34d466750}{Get\+Num\+Of\+Joints} () const
+\begin{DoxyCompactList}\small\item\em Get tot number of joints per frame. \end{DoxyCompactList}\item 
+void \hyperlink{class_frame_ab8d680e0de15f32079ba39654e0210f5}{Set\+Num\+Of\+Joints} (const unsigned int \&\+\_\+tot\+Joints)
+\begin{DoxyCompactList}\small\item\em Set tot number of joints per frame. \end{DoxyCompactList}\item 
+void \hyperlink{class_frame_a1324652e5954f13a6e641e528099c28d}{Set\+Root\+Translation} (const ngl\+::\+Vec3 \&\+\_\+translation)
+\begin{DoxyCompactList}\small\item\em Set root local translation. \end{DoxyCompactList}\item 
+ngl\+::\+Vec3 \hyperlink{class_frame_ac0ebd75466e20f6e478288e2f7bc4632}{Get\+Root\+Translation} () const
+\begin{DoxyCompactList}\small\item\em Get root local translation. \end{DoxyCompactList}\item 
+ngl\+::\+Mat4 \hyperlink{class_frame_a37f59e6b0f836892ab12ceb75ef36e53}{Get\+Joint\+Rotation} (const unsigned int \&\+\_\+id) const
+\begin{DoxyCompactList}\small\item\em Returns the joint rotation matrix. \end{DoxyCompactList}\item 
+void \hyperlink{class_frame_acdfdf30fe44c224feacd89c23933fd92}{Set\+Joint\+Rotation} (const unsigned int \&\+\_\+id, const ngl\+::\+Mat4 \&\+\_\+rot)
+\begin{DoxyCompactList}\small\item\em Set the joint rotation matrix, it will internally set the corresponding quaternion. \end{DoxyCompactList}\item 
+void \hyperlink{class_frame_a5e20fd259d5db73e524f020020e62fca}{Set\+Joint\+Quaternion} (const unsigned int \&\+\_\+id, const ngl\+::\+Quaternion \&\+\_\+quat)
+\begin{DoxyCompactList}\small\item\em Set the joint orientation matrix, it will internally set the corresponding rotation. \end{DoxyCompactList}\item 
+void \hyperlink{class_frame_a64c89339d07e5cdbadbe20fe3a9ef3ef}{Clone\+Frame} (const \hyperlink{class_frame}{Frame} \&\+\_\+frame)
+\begin{DoxyCompactList}\small\item\em Clones a frame, all its translation, rotation and quaternion data. \end{DoxyCompactList}\item 
+void \hyperlink{class_frame_aed2ecc0e807e4e08bc5884d09f657374}{Cubic} (const \hyperlink{class_frame}{Frame} \&\+\_\+frame0, const \hyperlink{class_frame}{Frame} \&\+\_\+frame1, const \hyperlink{class_frame}{Frame} \&\+\_\+frame2, const \hyperlink{class_frame}{Frame} \&\+\_\+frame3, \hyperlink{class_frame}{Frame} \&\+\_\+target\+Frame, float \+\_\+interval)
+\begin{DoxyCompactList}\small\item\em Cubic interpolation between frame1 and frame2. \end{DoxyCompactList}\item 
+void \hyperlink{class_frame_a5f579560df984da9c564062440324fa4}{Slerp} (const \hyperlink{class_frame}{Frame} \&\+\_\+frame0, const \hyperlink{class_frame}{Frame} \&\+\_\+frame1, \hyperlink{class_frame}{Frame} \&\+\_\+target\+Frame, float \+\_\+interval)
+\begin{DoxyCompactList}\small\item\em S\+L\+E\+RP interpolation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{class_frame_a5daf5c6beec390e01ed5be5c5b3d536c}{m\+\_\+num\+Joints}\hypertarget{class_frame_a5daf5c6beec390e01ed5be5c5b3d536c}{}\label{class_frame_a5daf5c6beec390e01ed5be5c5b3d536c}
+
+\begin{DoxyCompactList}\small\item\em Tot number of joints. \end{DoxyCompactList}\item 
+ngl\+::\+Vec3 \hyperlink{class_frame_a3bc0347f803a30b3384ddd80d42d6619}{m\+\_\+root\+Loc\+Translation}\hypertarget{class_frame_a3bc0347f803a30b3384ddd80d42d6619}{}\label{class_frame_a3bc0347f803a30b3384ddd80d42d6619}
+
+\begin{DoxyCompactList}\small\item\em Root local translation. \end{DoxyCompactList}\item 
+std\+::vector$<$ ngl\+::\+Quaternion $>$ \hyperlink{class_frame_a86fbc9adf4cd80d64632884532125e12}{m\+\_\+quaternion\+Data}\hypertarget{class_frame_a86fbc9adf4cd80d64632884532125e12}{}\label{class_frame_a86fbc9adf4cd80d64632884532125e12}
+
+\begin{DoxyCompactList}\small\item\em Quaternion data for each joint. \end{DoxyCompactList}\item 
+std\+::vector$<$ ngl\+::\+Mat4 $>$ \hyperlink{class_frame_a1f400adaf842c37fc2ef3b23c3721451}{m\+\_\+rotation\+Data}\hypertarget{class_frame_a1f400adaf842c37fc2ef3b23c3721451}{}\label{class_frame_a1f400adaf842c37fc2ef3b23c3721451}
+
+\begin{DoxyCompactList}\small\item\em Rotation matrices for each joint. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_frame_a5dd14a76a8ed29f6c169b5f3b32e01c2}{m\+\_\+id}\hypertarget{class_frame_a5dd14a76a8ed29f6c169b5f3b32e01c2}{}\label{class_frame_a5dd14a76a8ed29f6c169b5f3b32e01c2}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_frame}{Frame} id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Frame@{Frame}!Frame@{Frame}}
+\index{Frame@{Frame}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{Frame(const unsigned int \&\+\_\+id)}{Frame(const unsigned int \&\_id)}}]{\setlength{\rightskip}{0pt plus 5cm}Frame\+::\+Frame (
+\begin{DoxyParamCaption}
+\item[{const unsigned int \&}]{\+\_\+id}
+\end{DoxyParamCaption}
+)}\hypertarget{class_frame_a3aaef68e216ad9eb4f66a011e95ca79d}{}\label{class_frame_a3aaef68e216ad9eb4f66a011e95ca79d}
+
+
+Ctor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+id} & \hyperlink{class_frame}{Frame} id \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Frame@{Frame}!Clone\+Frame@{Clone\+Frame}}
+\index{Clone\+Frame@{Clone\+Frame}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{Clone\+Frame(const Frame \&\+\_\+frame)}{CloneFrame(const Frame \&\_frame)}}]{\setlength{\rightskip}{0pt plus 5cm}void Frame\+::\+Clone\+Frame (
+\begin{DoxyParamCaption}
+\item[{const {\bf Frame} \&}]{\+\_\+frame}
+\end{DoxyParamCaption}
+)}\hypertarget{class_frame_a64c89339d07e5cdbadbe20fe3a9ef3ef}{}\label{class_frame_a64c89339d07e5cdbadbe20fe3a9ef3ef}
+
+
+Clones a frame, all its translation, rotation and quaternion data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+frame} & \hyperlink{class_frame}{Frame} to clone \\
+\hline
+\end{DoxyParams}
+\index{Frame@{Frame}!Cubic@{Cubic}}
+\index{Cubic@{Cubic}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{Cubic(const Frame \&\+\_\+frame0, const Frame \&\+\_\+frame1, const Frame \&\+\_\+frame2, const Frame \&\+\_\+frame3, Frame \&\+\_\+target\+Frame, float \+\_\+interval)}{Cubic(const Frame \&\_frame0, const Frame \&\_frame1, const Frame \&\_frame2, const Frame \&\_frame3, Frame \&\_targetFrame, float \_interval)}}]{\setlength{\rightskip}{0pt plus 5cm}void Frame\+::\+Cubic (
+\begin{DoxyParamCaption}
+\item[{const {\bf Frame} \&}]{\+\_\+frame0, }
+\item[{const {\bf Frame} \&}]{\+\_\+frame1, }
+\item[{const {\bf Frame} \&}]{\+\_\+frame2, }
+\item[{const {\bf Frame} \&}]{\+\_\+frame3, }
+\item[{{\bf Frame} \&}]{\+\_\+target\+Frame, }
+\item[{float}]{\+\_\+interval}
+\end{DoxyParamCaption}
+)}\hypertarget{class_frame_aed2ecc0e807e4e08bc5884d09f657374}{}\label{class_frame_aed2ecc0e807e4e08bc5884d09f657374}
+
+
+Cubic interpolation between frame1 and frame2. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+frame0} & \hyperlink{class_frame}{Frame} before frame1 (could be from different animation) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+frame1} & First frame that will be interpolated \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+frame2} & Second frame that will be interpolated \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+frame3} & \hyperlink{class_frame}{Frame} after frame2 (could be from different animation) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+target\+Frame} & Interpolation result \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+interval} & Interpolation interval \\
+\hline
+\end{DoxyParams}
+\index{Frame@{Frame}!Get\+Frame\+ID@{Get\+Frame\+ID}}
+\index{Get\+Frame\+ID@{Get\+Frame\+ID}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{Get\+Frame\+I\+D() const}{GetFrameID() const}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Frame\+::\+Get\+Frame\+ID (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_frame_a09d802e0d0334639af5f2c722a6b01b4}{}\label{class_frame_a09d802e0d0334639af5f2c722a6b01b4}
+
+
+Get frame id. 
+
+\begin{DoxyReturn}{Returns}
+m\+\_\+id \hyperlink{class_frame}{Frame} id 
+\end{DoxyReturn}
+\index{Frame@{Frame}!Get\+Joint\+Rotation@{Get\+Joint\+Rotation}}
+\index{Get\+Joint\+Rotation@{Get\+Joint\+Rotation}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{Get\+Joint\+Rotation(const unsigned int \&\+\_\+id) const}{GetJointRotation(const unsigned int \&\_id) const}}]{\setlength{\rightskip}{0pt plus 5cm}ngl\+::\+Mat4 Frame\+::\+Get\+Joint\+Rotation (
+\begin{DoxyParamCaption}
+\item[{const unsigned int \&}]{\+\_\+id}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_frame_a37f59e6b0f836892ab12ceb75ef36e53}{}\label{class_frame_a37f59e6b0f836892ab12ceb75ef36e53}
+
+
+Returns the joint rotation matrix. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+id} & \hyperlink{struct_joint}{Joint} id \\
+\hline
+\end{DoxyParams}
+\index{Frame@{Frame}!Get\+Num\+Of\+Joints@{Get\+Num\+Of\+Joints}}
+\index{Get\+Num\+Of\+Joints@{Get\+Num\+Of\+Joints}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{Get\+Num\+Of\+Joints() const}{GetNumOfJoints() const}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Frame\+::\+Get\+Num\+Of\+Joints (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_frame_ac84074496370db74643c16d34d466750}{}\label{class_frame_ac84074496370db74643c16d34d466750}
+
+
+Get tot number of joints per frame. 
+
+\begin{DoxyReturn}{Returns}
+m\+\_\+tot\+Joints 
+\end{DoxyReturn}
+\index{Frame@{Frame}!Get\+Root\+Translation@{Get\+Root\+Translation}}
+\index{Get\+Root\+Translation@{Get\+Root\+Translation}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{Get\+Root\+Translation() const}{GetRootTranslation() const}}]{\setlength{\rightskip}{0pt plus 5cm}ngl\+::\+Vec3 Frame\+::\+Get\+Root\+Translation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_frame_ac0ebd75466e20f6e478288e2f7bc4632}{}\label{class_frame_ac0ebd75466e20f6e478288e2f7bc4632}
+
+
+Get root local translation. 
+
+\begin{DoxyReturn}{Returns}
+m\+\_\+root\+Loc\+Translation Root local translation 
+\end{DoxyReturn}
+\index{Frame@{Frame}!Set\+Joint\+Quaternion@{Set\+Joint\+Quaternion}}
+\index{Set\+Joint\+Quaternion@{Set\+Joint\+Quaternion}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{Set\+Joint\+Quaternion(const unsigned int \&\+\_\+id, const ngl\+::\+Quaternion \&\+\_\+quat)}{SetJointQuaternion(const unsigned int \&\_id, const ngl::Quaternion \&\_quat)}}]{\setlength{\rightskip}{0pt plus 5cm}void Frame\+::\+Set\+Joint\+Quaternion (
+\begin{DoxyParamCaption}
+\item[{const unsigned int \&}]{\+\_\+id, }
+\item[{const ngl\+::\+Quaternion \&}]{\+\_\+quat}
+\end{DoxyParamCaption}
+)}\hypertarget{class_frame_a5e20fd259d5db73e524f020020e62fca}{}\label{class_frame_a5e20fd259d5db73e524f020020e62fca}
+
+
+Set the joint orientation matrix, it will internally set the corresponding rotation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+id} & \hyperlink{struct_joint}{Joint} id \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+quat} & Quaternion representing orientation \\
+\hline
+\end{DoxyParams}
+\index{Frame@{Frame}!Set\+Joint\+Rotation@{Set\+Joint\+Rotation}}
+\index{Set\+Joint\+Rotation@{Set\+Joint\+Rotation}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{Set\+Joint\+Rotation(const unsigned int \&\+\_\+id, const ngl\+::\+Mat4 \&\+\_\+rot)}{SetJointRotation(const unsigned int \&\_id, const ngl::Mat4 \&\_rot)}}]{\setlength{\rightskip}{0pt plus 5cm}void Frame\+::\+Set\+Joint\+Rotation (
+\begin{DoxyParamCaption}
+\item[{const unsigned int \&}]{\+\_\+id, }
+\item[{const ngl\+::\+Mat4 \&}]{\+\_\+rot}
+\end{DoxyParamCaption}
+)}\hypertarget{class_frame_acdfdf30fe44c224feacd89c23933fd92}{}\label{class_frame_acdfdf30fe44c224feacd89c23933fd92}
+
+
+Set the joint rotation matrix, it will internally set the corresponding quaternion. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+id} & \hyperlink{struct_joint}{Joint} id \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+rot} & Rotation matrix \\
+\hline
+\end{DoxyParams}
+\index{Frame@{Frame}!Set\+Num\+Of\+Joints@{Set\+Num\+Of\+Joints}}
+\index{Set\+Num\+Of\+Joints@{Set\+Num\+Of\+Joints}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{Set\+Num\+Of\+Joints(const unsigned int \&\+\_\+tot\+Joints)}{SetNumOfJoints(const unsigned int \&\_totJoints)}}]{\setlength{\rightskip}{0pt plus 5cm}void Frame\+::\+Set\+Num\+Of\+Joints (
+\begin{DoxyParamCaption}
+\item[{const unsigned int \&}]{\+\_\+tot\+Joints}
+\end{DoxyParamCaption}
+)}\hypertarget{class_frame_ab8d680e0de15f32079ba39654e0210f5}{}\label{class_frame_ab8d680e0de15f32079ba39654e0210f5}
+
+
+Set tot number of joints per frame. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+tot\+Joints} & Tot number of joints \\
+\hline
+\end{DoxyParams}
+\index{Frame@{Frame}!Set\+Root\+Translation@{Set\+Root\+Translation}}
+\index{Set\+Root\+Translation@{Set\+Root\+Translation}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{Set\+Root\+Translation(const ngl\+::\+Vec3 \&\+\_\+translation)}{SetRootTranslation(const ngl::Vec3 \&\_translation)}}]{\setlength{\rightskip}{0pt plus 5cm}void Frame\+::\+Set\+Root\+Translation (
+\begin{DoxyParamCaption}
+\item[{const ngl\+::\+Vec3 \&}]{\+\_\+translation}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_frame_a1324652e5954f13a6e641e528099c28d}{}\label{class_frame_a1324652e5954f13a6e641e528099c28d}
+
+
+Set root local translation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+translation} & Translation vector \\
+\hline
+\end{DoxyParams}
+\index{Frame@{Frame}!Slerp@{Slerp}}
+\index{Slerp@{Slerp}!Frame@{Frame}}
+\subsubsection[{\texorpdfstring{Slerp(const Frame \&\+\_\+frame0, const Frame \&\+\_\+frame1, Frame \&\+\_\+target\+Frame, float \+\_\+interval)}{Slerp(const Frame \&\_frame0, const Frame \&\_frame1, Frame \&\_targetFrame, float \_interval)}}]{\setlength{\rightskip}{0pt plus 5cm}void Frame\+::\+Slerp (
+\begin{DoxyParamCaption}
+\item[{const {\bf Frame} \&}]{\+\_\+frame0, }
+\item[{const {\bf Frame} \&}]{\+\_\+frame1, }
+\item[{{\bf Frame} \&}]{\+\_\+target\+Frame, }
+\item[{float}]{\+\_\+interval}
+\end{DoxyParamCaption}
+)}\hypertarget{class_frame_a5f579560df984da9c564062440324fa4}{}\label{class_frame_a5f579560df984da9c564062440324fa4}
+
+
+S\+L\+E\+RP interpolation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+frame0} & First frame that will be interpolated \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+frame1} & Second frame that will be interpolated \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+target\+Frame} & Interpolation result \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+interval} & Interpolation interval \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_frame_8h}{Frame.\+h}\end{DoxyCompactItemize}

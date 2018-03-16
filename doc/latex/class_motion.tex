@@ -1,0 +1,246 @@
+\hypertarget{class_motion}{}\section{Motion Class Reference}
+\label{class_motion}\index{Motion@{Motion}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_motion_a444a2569aaadd10d76b4e6e6bfb3df0c}{Motion} ()\hypertarget{class_motion_a444a2569aaadd10d76b4e6e6bfb3df0c}{}\label{class_motion_a444a2569aaadd10d76b4e6e6bfb3df0c}
+
+\begin{DoxyCompactList}\small\item\em Default ctor. \end{DoxyCompactList}\item 
+\hyperlink{class_motion_a3989871f9b2b9b69c88b5437b40a72c6}{$\sim$\+Motion} ()\hypertarget{class_motion_a3989871f9b2b9b69c88b5437b40a72c6}{}\label{class_motion_a3989871f9b2b9b69c88b5437b40a72c6}
+
+\begin{DoxyCompactList}\small\item\em Dtor. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_motion_a449a6a7a1b6cb18650f84817dfe495fc}{Get\+Num\+Frames} () const
+\begin{DoxyCompactList}\small\item\em Get tot number of frames. \end{DoxyCompactList}\item 
+void \hyperlink{class_motion_ad63d12ad68fab85b26a2c94497ebf423}{Set\+Num\+Frames} (const unsigned int \&\+\_\+num\+Frames)
+\begin{DoxyCompactList}\small\item\em Set number of frames. \end{DoxyCompactList}\item 
+float \hyperlink{class_motion_a8d7e9bb1ee369497d899597d5e5bde51}{Get\+Frame\+Rate} () const
+\begin{DoxyCompactList}\small\item\em Get frame rate. \end{DoxyCompactList}\item 
+void \hyperlink{class_motion_a391332c3e0757ce2a101322b7106ead0}{Set\+Frame\+Rate} (const float \&\+\_\+frame\+Rate)
+\begin{DoxyCompactList}\small\item\em Set frame rate. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_motion_abe290354fd6665b50ece211b5061c97c}{Get\+Num\+D\+OF} () const
+\begin{DoxyCompactList}\small\item\em Get number of degree of freedom. \end{DoxyCompactList}\item 
+void \hyperlink{class_motion_a17d717df4f45a99317bd7144fbf00d6c}{Set\+Num\+D\+OF} (const unsigned int \&\+\_\+num\+D\+OF)
+\begin{DoxyCompactList}\small\item\em Set number of degree of freedom. \end{DoxyCompactList}\item 
+void \hyperlink{class_motion_a1be9532d5108f5f4726b25f6d2adebad}{Set\+Num\+Joints} (const unsigned int \&\+\_\+num\+Joints)
+\begin{DoxyCompactList}\small\item\em Set number of skeleton joints. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_motion_ac862979f87f5ccebd7eb9997f6d664bf}{Get\+Num\+Joints} () const
+\begin{DoxyCompactList}\small\item\em Returns tot number of joints. \end{DoxyCompactList}\item 
+bool \hyperlink{class_motion_a4910d036ed1a52d67266740cf435bd25}{Load} (std\+::istream \&\+\_\+str, \hyperlink{class_skeleton}{Skeleton} $\ast$\+\_\+skeleton)
+\begin{DoxyCompactList}\small\item\em Load motion data from .bvh file. \end{DoxyCompactList}\item 
+void \hyperlink{class_motion_aa75a13334d31ee1a71683bb805e28aa2}{Deallocate\+Frame\+Storage} ()\hypertarget{class_motion_aa75a13334d31ee1a71683bb805e28aa2}{}\label{class_motion_aa75a13334d31ee1a71683bb805e28aa2}
+
+\begin{DoxyCompactList}\small\item\em Deallocates (frees) frames content. \end{DoxyCompactList}\item 
+void \hyperlink{class_motion_a4d9c91b108af5582377d035c4fc316b1}{Allocate\+Frame\+Storage} ()\hypertarget{class_motion_a4d9c91b108af5582377d035c4fc316b1}{}\label{class_motion_a4d9c91b108af5582377d035c4fc316b1}
+
+\begin{DoxyCompactList}\small\item\em Allocates data storage for frame content. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{class_frame}{Frame} $>$ $>$ \hyperlink{class_motion_a76a546c4f5867d915cc84af890668c57}{Get\+Frames} () const
+\begin{DoxyCompactList}\small\item\em Returns list of frames. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_frame}{Frame} $>$ \hyperlink{class_motion_a758f9d19bae22bc775f78d2aa58ab1c5}{Get\+Frame\+At} (const unsigned int \&\+\_\+id) const\hypertarget{class_motion_a758f9d19bae22bc775f78d2aa58ab1c5}{}\label{class_motion_a758f9d19bae22bc775f78d2aa58ab1c5}
+
+\begin{DoxyCompactList}\small\item\em Get frame corresponding to id. \end{DoxyCompactList}\item 
+void \hyperlink{class_motion_a8fef2b49198752e66a5f7268a6a3136b}{Extract\+Motion\+Data} (const std\+::shared\+\_\+ptr$<$ \hyperlink{struct_joint}{Joint} $>$ \&\+\_\+joint, float $\ast$\+\_\+motion\+Data, std\+::shared\+\_\+ptr$<$ \hyperlink{class_frame}{Frame} $>$ \+\_\+frame)
+\begin{DoxyCompactList}\small\item\em Extracts translation/rotations from motion data parsed from .bvh file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::char\+\_\+separator$<$ char $>$ \hyperlink{class_motion_a634c3ff073eed0a22423b2068b4054dc}{m\+\_\+separators}\hypertarget{class_motion_a634c3ff073eed0a22423b2068b4054dc}{}\label{class_motion_a634c3ff073eed0a22423b2068b4054dc}
+
+\begin{DoxyCompactList}\small\item\em Delimeters for tokenizer. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_motion_a3bbd62529e65c7e1cdf0b11ce5ddd83e}{m\+\_\+num\+Frames}\hypertarget{class_motion_a3bbd62529e65c7e1cdf0b11ce5ddd83e}{}\label{class_motion_a3bbd62529e65c7e1cdf0b11ce5ddd83e}
+
+\begin{DoxyCompactList}\small\item\em Number of frames. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_motion_ad16a2c807c942da7663a6791ad33fd52}{m\+\_\+num\+D\+OF}\hypertarget{class_motion_ad16a2c807c942da7663a6791ad33fd52}{}\label{class_motion_ad16a2c807c942da7663a6791ad33fd52}
+
+\begin{DoxyCompactList}\small\item\em Number of degree of freedom. \end{DoxyCompactList}\item 
+float \hyperlink{class_motion_a90d1f96d5075f86d06533a1cc7ee9c0f}{m\+\_\+frame\+Rate}\hypertarget{class_motion_a90d1f96d5075f86d06533a1cc7ee9c0f}{}\label{class_motion_a90d1f96d5075f86d06533a1cc7ee9c0f}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_frame}{Frame} rate. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{class_frame}{Frame} $>$ $>$ \hyperlink{class_motion_aeb77f9ca3a537bfb94d6036b221dab73}{m\+\_\+frames}\hypertarget{class_motion_aeb77f9ca3a537bfb94d6036b221dab73}{}\label{class_motion_aeb77f9ca3a537bfb94d6036b221dab73}
+
+\begin{DoxyCompactList}\small\item\em List of animation frames container. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_motion_af838f86e18d4b63bf86b79141090f639}{m\+\_\+num\+Joints}\hypertarget{class_motion_af838f86e18d4b63bf86b79141090f639}{}\label{class_motion_af838f86e18d4b63bf86b79141090f639}
+
+\begin{DoxyCompactList}\small\item\em Total number of joints. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Motion@{Motion}!Extract\+Motion\+Data@{Extract\+Motion\+Data}}
+\index{Extract\+Motion\+Data@{Extract\+Motion\+Data}!Motion@{Motion}}
+\subsubsection[{\texorpdfstring{Extract\+Motion\+Data(const std\+::shared\+\_\+ptr$<$ Joint $>$ \&\+\_\+joint, float $\ast$\+\_\+motion\+Data, std\+::shared\+\_\+ptr$<$ Frame $>$ \+\_\+frame)}{ExtractMotionData(const std::shared\_ptr< Joint > \&\_joint, float *\_motionData, std::shared\_ptr< Frame > \_frame)}}]{\setlength{\rightskip}{0pt plus 5cm}void Motion\+::\+Extract\+Motion\+Data (
+\begin{DoxyParamCaption}
+\item[{const std\+::shared\+\_\+ptr$<$ {\bf Joint} $>$ \&}]{\+\_\+joint, }
+\item[{float $\ast$}]{\+\_\+motion\+Data, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Frame} $>$}]{\+\_\+frame}
+\end{DoxyParamCaption}
+)}\hypertarget{class_motion_a8fef2b49198752e66a5f7268a6a3136b}{}\label{class_motion_a8fef2b49198752e66a5f7268a6a3136b}
+
+
+Extracts translation/rotations from motion data parsed from .bvh file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+joint} & Current joint to associate with data \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+motion\+Data} & \hyperlink{class_motion}{Motion} data retrieved from file \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+frame} & Current frame where data will be stored to \\
+\hline
+\end{DoxyParams}
+\index{Motion@{Motion}!Get\+Frame\+Rate@{Get\+Frame\+Rate}}
+\index{Get\+Frame\+Rate@{Get\+Frame\+Rate}!Motion@{Motion}}
+\subsubsection[{\texorpdfstring{Get\+Frame\+Rate() const}{GetFrameRate() const}}]{\setlength{\rightskip}{0pt plus 5cm}float Motion\+::\+Get\+Frame\+Rate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_motion_a8d7e9bb1ee369497d899597d5e5bde51}{}\label{class_motion_a8d7e9bb1ee369497d899597d5e5bde51}
+
+
+Get frame rate. 
+
+\begin{DoxyReturn}{Returns}
+m\+\_\+frame\+Rate \hyperlink{class_frame}{Frame} rate 
+\end{DoxyReturn}
+\index{Motion@{Motion}!Get\+Frames@{Get\+Frames}}
+\index{Get\+Frames@{Get\+Frames}!Motion@{Motion}}
+\subsubsection[{\texorpdfstring{Get\+Frames() const}{GetFrames() const}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::shared\+\_\+ptr$<$ {\bf Frame} $>$ $>$ Motion\+::\+Get\+Frames (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_motion_a76a546c4f5867d915cc84af890668c57}{}\label{class_motion_a76a546c4f5867d915cc84af890668c57}
+
+
+Returns list of frames. 
+
+\begin{DoxyReturn}{Returns}
+m\+\_\+frames Animation frames 
+\end{DoxyReturn}
+\index{Motion@{Motion}!Get\+Num\+D\+OF@{Get\+Num\+D\+OF}}
+\index{Get\+Num\+D\+OF@{Get\+Num\+D\+OF}!Motion@{Motion}}
+\subsubsection[{\texorpdfstring{Get\+Num\+D\+O\+F() const}{GetNumDOF() const}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Motion\+::\+Get\+Num\+D\+OF (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_motion_abe290354fd6665b50ece211b5061c97c}{}\label{class_motion_abe290354fd6665b50ece211b5061c97c}
+
+
+Get number of degree of freedom. 
+
+\begin{DoxyReturn}{Returns}
+m\+\_\+num\+D\+OF Number degrees of freedom 
+\end{DoxyReturn}
+\index{Motion@{Motion}!Get\+Num\+Frames@{Get\+Num\+Frames}}
+\index{Get\+Num\+Frames@{Get\+Num\+Frames}!Motion@{Motion}}
+\subsubsection[{\texorpdfstring{Get\+Num\+Frames() const}{GetNumFrames() const}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Motion\+::\+Get\+Num\+Frames (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_motion_a449a6a7a1b6cb18650f84817dfe495fc}{}\label{class_motion_a449a6a7a1b6cb18650f84817dfe495fc}
+
+
+Get tot number of frames. 
+
+\begin{DoxyReturn}{Returns}
+m\+\_\+num\+Frames Total number of frames 
+\end{DoxyReturn}
+\index{Motion@{Motion}!Get\+Num\+Joints@{Get\+Num\+Joints}}
+\index{Get\+Num\+Joints@{Get\+Num\+Joints}!Motion@{Motion}}
+\subsubsection[{\texorpdfstring{Get\+Num\+Joints() const}{GetNumJoints() const}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Motion\+::\+Get\+Num\+Joints (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_motion_ac862979f87f5ccebd7eb9997f6d664bf}{}\label{class_motion_ac862979f87f5ccebd7eb9997f6d664bf}
+
+
+Returns tot number of joints. 
+
+\begin{DoxyReturn}{Returns}
+m\+\_\+num\+Joints Number of joints 
+\end{DoxyReturn}
+\index{Motion@{Motion}!Load@{Load}}
+\index{Load@{Load}!Motion@{Motion}}
+\subsubsection[{\texorpdfstring{Load(std\+::istream \&\+\_\+str, Skeleton $\ast$\+\_\+skeleton)}{Load(std::istream \&\_str, Skeleton *\_skeleton)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Motion\+::\+Load (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{\+\_\+str, }
+\item[{{\bf Skeleton} $\ast$}]{\+\_\+skeleton}
+\end{DoxyParamCaption}
+)}\hypertarget{class_motion_a4910d036ed1a52d67266740cf435bd25}{}\label{class_motion_a4910d036ed1a52d67266740cf435bd25}
+
+
+Load motion data from .bvh file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+str} & File stream \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+skeleton} & \hyperlink{class_skeleton}{Skeleton} structure \\
+\hline
+\end{DoxyParams}
+\index{Motion@{Motion}!Set\+Frame\+Rate@{Set\+Frame\+Rate}}
+\index{Set\+Frame\+Rate@{Set\+Frame\+Rate}!Motion@{Motion}}
+\subsubsection[{\texorpdfstring{Set\+Frame\+Rate(const float \&\+\_\+frame\+Rate)}{SetFrameRate(const float \&\_frameRate)}}]{\setlength{\rightskip}{0pt plus 5cm}void Motion\+::\+Set\+Frame\+Rate (
+\begin{DoxyParamCaption}
+\item[{const float \&}]{\+\_\+frame\+Rate}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_motion_a391332c3e0757ce2a101322b7106ead0}{}\label{class_motion_a391332c3e0757ce2a101322b7106ead0}
+
+
+Set frame rate. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+frame\+Rate} & \hyperlink{class_frame}{Frame} rate \\
+\hline
+\end{DoxyParams}
+\index{Motion@{Motion}!Set\+Num\+D\+OF@{Set\+Num\+D\+OF}}
+\index{Set\+Num\+D\+OF@{Set\+Num\+D\+OF}!Motion@{Motion}}
+\subsubsection[{\texorpdfstring{Set\+Num\+D\+O\+F(const unsigned int \&\+\_\+num\+D\+O\+F)}{SetNumDOF(const unsigned int \&\_numDOF)}}]{\setlength{\rightskip}{0pt plus 5cm}void Motion\+::\+Set\+Num\+D\+OF (
+\begin{DoxyParamCaption}
+\item[{const unsigned int \&}]{\+\_\+num\+D\+OF}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_motion_a17d717df4f45a99317bd7144fbf00d6c}{}\label{class_motion_a17d717df4f45a99317bd7144fbf00d6c}
+
+
+Set number of degree of freedom. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+num\+D\+OF} & Number of degree of freedom \\
+\hline
+\end{DoxyParams}
+\index{Motion@{Motion}!Set\+Num\+Frames@{Set\+Num\+Frames}}
+\index{Set\+Num\+Frames@{Set\+Num\+Frames}!Motion@{Motion}}
+\subsubsection[{\texorpdfstring{Set\+Num\+Frames(const unsigned int \&\+\_\+num\+Frames)}{SetNumFrames(const unsigned int \&\_numFrames)}}]{\setlength{\rightskip}{0pt plus 5cm}void Motion\+::\+Set\+Num\+Frames (
+\begin{DoxyParamCaption}
+\item[{const unsigned int \&}]{\+\_\+num\+Frames}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_motion_ad63d12ad68fab85b26a2c94497ebf423}{}\label{class_motion_ad63d12ad68fab85b26a2c94497ebf423}
+
+
+Set number of frames. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+num\+Frames} & Number of frames \\
+\hline
+\end{DoxyParams}
+\index{Motion@{Motion}!Set\+Num\+Joints@{Set\+Num\+Joints}}
+\index{Set\+Num\+Joints@{Set\+Num\+Joints}!Motion@{Motion}}
+\subsubsection[{\texorpdfstring{Set\+Num\+Joints(const unsigned int \&\+\_\+num\+Joints)}{SetNumJoints(const unsigned int \&\_numJoints)}}]{\setlength{\rightskip}{0pt plus 5cm}void Motion\+::\+Set\+Num\+Joints (
+\begin{DoxyParamCaption}
+\item[{const unsigned int \&}]{\+\_\+num\+Joints}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_motion_a1be9532d5108f5f4726b25f6d2adebad}{}\label{class_motion_a1be9532d5108f5f4726b25f6d2adebad}
+
+
+Set number of skeleton joints. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+num\+Joints} & Number of joints \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_motion_8h}{Motion.\+h}\end{DoxyCompactItemize}

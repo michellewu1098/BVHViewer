@@ -1,0 +1,328 @@
+\hypertarget{class_n_g_l_scene}{}\section{N\+G\+L\+Scene Class Reference}
+\label{class_n_g_l_scene}\index{N\+G\+L\+Scene@{N\+G\+L\+Scene}}
+
+
+our main glwindow widget for N\+GL applications all drawing elements are put in this file  
+
+
+
+
+{\ttfamily \#include $<$N\+G\+L\+Scene.\+h$>$}
+
+Inheritance diagram for N\+G\+L\+Scene\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_n_g_l_scene}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_g_l_scene_a5c5abd9632cc61aa6bfbb8c237d66f27}{N\+G\+L\+Scene} (Q\+Widget $\ast$\+\_\+parent)
+\begin{DoxyCompactList}\small\item\em Ctor for our N\+GL drawing class. \end{DoxyCompactList}\item 
+\hyperlink{class_n_g_l_scene_abda05d130945833bfbb6bad8d619f7f5}{$\sim$\+N\+G\+L\+Scene} ()\hypertarget{class_n_g_l_scene_abda05d130945833bfbb6bad8d619f7f5}{}\label{class_n_g_l_scene_abda05d130945833bfbb6bad8d619f7f5}
+
+\begin{DoxyCompactList}\small\item\em Dtor must close down ngl and release Open\+GL resources. \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_a3eead0bab68ee568552786d1e879f3b1}{initialize\+GL} () override\hypertarget{class_n_g_l_scene_a3eead0bab68ee568552786d1e879f3b1}{}\label{class_n_g_l_scene_a3eead0bab68ee568552786d1e879f3b1}
+
+\begin{DoxyCompactList}\small\item\em Initialize class is called once when the window is created and we have a valid GL context use this to setup any default GL stuff. \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_a3d1b83825c3188fd8fefc1bc10ec359b}{paint\+GL} () override\hypertarget{class_n_g_l_scene_a3d1b83825c3188fd8fefc1bc10ec359b}{}\label{class_n_g_l_scene_a3d1b83825c3188fd8fefc1bc10ec359b}
+
+\begin{DoxyCompactList}\small\item\em Function called everytime we want to draw the scene. \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_a84ad27896b5eccc43fdf1a8fffb507c5}{resize\+GL} (int \+\_\+w, int \+\_\+h) override
+\begin{DoxyCompactList}\small\item\em This is called everytime we resize the window. \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_a8304f04407d6eadac275b45fce81f651}{Set\+B\+V\+H\+File\+Path} (const std\+::string \&\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Set B\+VH file path from gui input. \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_a969ca22ec4065faebc584eb15f1eb1e0}{Pause\+Animation} (bool \+\_\+pause)
+\begin{DoxyCompactList}\small\item\em Pause (or play) animation. \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_ac95e47cdddd4a3b52c0f4fa748337b30}{Backward\+Animation} ()\hypertarget{class_n_g_l_scene_ac95e47cdddd4a3b52c0f4fa748337b30}{}\label{class_n_g_l_scene_ac95e47cdddd4a3b52c0f4fa748337b30}
+
+\begin{DoxyCompactList}\small\item\em Play animation backward. \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_a7cae8725893f528f57b86656110a9bf8}{Forward\+Animation} ()\hypertarget{class_n_g_l_scene_a7cae8725893f528f57b86656110a9bf8}{}\label{class_n_g_l_scene_a7cae8725893f528f57b86656110a9bf8}
+
+\begin{DoxyCompactList}\small\item\em Play animation forward. \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_ab0d185876d8382166bf8d4240cb10ab3}{Reset\+Animation} ()\hypertarget{class_n_g_l_scene_ab0d185876d8382166bf8d4240cb10ab3}{}\label{class_n_g_l_scene_ab0d185876d8382166bf8d4240cb10ab3}
+
+\begin{DoxyCompactList}\small\item\em Reset animation from start. \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_abc67a3094c0031132cd56f9b80f46fa9}{Next\+Frame} ()\hypertarget{class_n_g_l_scene_abc67a3094c0031132cd56f9b80f46fa9}{}\label{class_n_g_l_scene_abc67a3094c0031132cd56f9b80f46fa9}
+
+\begin{DoxyCompactList}\small\item\em Play next frame. \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_a373a926122512f573a8e26417e017942}{Previous\+Frame} ()\hypertarget{class_n_g_l_scene_a373a926122512f573a8e26417e017942}{}\label{class_n_g_l_scene_a373a926122512f573a8e26417e017942}
+
+\begin{DoxyCompactList}\small\item\em Play previous frame. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_n_g_l_scene_aa3a2319e793171d905eae8396c15971f}{Get\+Tot\+Num\+Frames} ()\hypertarget{class_n_g_l_scene_aa3a2319e793171d905eae8396c15971f}{}\label{class_n_g_l_scene_aa3a2319e793171d905eae8396c15971f}
+
+\begin{DoxyCompactList}\small\item\em Returns tot number of frames to be displayed on UI. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_n_g_l_scene_ad358a828f3f9567180120672b9aac3f4}{Get\+Current\+Frame} ()\hypertarget{class_n_g_l_scene_ad358a828f3f9567180120672b9aac3f4}{}\label{class_n_g_l_scene_ad358a828f3f9567180120672b9aac3f4}
+
+\begin{DoxyCompactList}\small\item\em Returns current frame being rendered for display. \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_ab56d4a6117937cc106f657129ee8a304}{Set\+Current\+Motion} (const int \&\+\_\+current\+Motion)
+\begin{DoxyCompactList}\small\item\em Set current motion used. \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_ad93102e6a6e90c8fde65651fdd9f7e41}{Set\+Blending\+Options} (const unsigned int \&\+\_\+start\+Frame, const unsigned int \&\+\_\+end\+Frame, const unsigned int \&\+\_\+blend\+Range, const unsigned int \&\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Sets blending options chose by user through dialog window. \end{DoxyCompactList}\item 
+std\+::vector$<$ unsigned int $>$ \hyperlink{class_n_g_l_scene_a9cb8640625fed9acdb1981df14f6e700}{Check\+Blending\+Ready} ()\hypertarget{class_n_g_l_scene_a9cb8640625fed9acdb1981df14f6e700}{}\label{class_n_g_l_scene_a9cb8640625fed9acdb1981df14f6e700}
+
+\begin{DoxyCompactList}\small\item\em Allows to check if system is ready to perform interpolation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_n_g_l_scene_a3335e6b631a608340dee63df69a8fb53}{key\+Press\+Event} (Q\+Key\+Event $\ast$\+\_\+event) override
+\begin{DoxyCompactList}\small\item\em Qt Event called when a key is pressed. \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_af4ebd25d546f7af496dfda6a2d3d7c2b}{mouse\+Move\+Event} (Q\+Mouse\+Event $\ast$\+\_\+event) override
+\begin{DoxyCompactList}\small\item\em This method is called every time a mouse is moved. \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_ad0df7ecbbd8f9537f66793c88b9fd831}{mouse\+Press\+Event} (Q\+Mouse\+Event $\ast$\+\_\+event) override
+\begin{DoxyCompactList}\small\item\em This method is called everytime the mouse button is pressed inherited from Q\+Object and overridden here. \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_a04223f1f8b96093e9606539ac0fc89c5}{mouse\+Release\+Event} (Q\+Mouse\+Event $\ast$\+\_\+event) override
+\begin{DoxyCompactList}\small\item\em This method is called everytime the mouse button is released inherited from Q\+Object and overridden here. \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_a8c32596b941a6a38515378e309ee6f02}{wheel\+Event} (Q\+Wheel\+Event $\ast$\+\_\+event) override
+\begin{DoxyCompactList}\small\item\em This method is called everytime the mouse wheel is moved inherited from Q\+Object and overridden here. \end{DoxyCompactList}\item 
+void \hyperlink{class_n_g_l_scene_adaf5940c83dc00d8a9960bab5e6914c0}{timer\+Event} (Q\+Timer\+Event $\ast$\+\_\+event) override
+\begin{DoxyCompactList}\small\item\em Timer event triggered by start\+Timer() \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_n_g_l_scene_a40a930670746d21518278cf19f811eb7}{m\+\_\+timer\+ID}\hypertarget{class_n_g_l_scene_a40a930670746d21518278cf19f811eb7}{}\label{class_n_g_l_scene_a40a930670746d21518278cf19f811eb7}
+
+\begin{DoxyCompactList}\small\item\em Timer id. \end{DoxyCompactList}\item 
+bool \hyperlink{class_n_g_l_scene_a9fa0340bd882fffa1723b15d66b492ca}{m\+\_\+is\+Loaded}\hypertarget{class_n_g_l_scene_a9fa0340bd882fffa1723b15d66b492ca}{}\label{class_n_g_l_scene_a9fa0340bd882fffa1723b15d66b492ca}
+
+\begin{DoxyCompactList}\small\item\em Used to check if file has been loaded. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_n_g_l_scene_a50700af79af03056626a21f6c9e80f6e}{m\+\_\+filename}\hypertarget{class_n_g_l_scene_a50700af79af03056626a21f6c9e80f6e}{}\label{class_n_g_l_scene_a50700af79af03056626a21f6c9e80f6e}
+
+\begin{DoxyCompactList}\small\item\em B\+VH filename. \end{DoxyCompactList}\item 
+\hyperlink{class_b_v_h_scene}{B\+V\+H\+Scene} \hyperlink{class_n_g_l_scene_a390c0987890b10b3426f7513fd930e96}{m\+\_\+scene}\hypertarget{class_n_g_l_scene_a390c0987890b10b3426f7513fd930e96}{}\label{class_n_g_l_scene_a390c0987890b10b3426f7513fd930e96}
+
+\begin{DoxyCompactList}\small\item\em The B\+VH scene. \end{DoxyCompactList}\item 
+\hyperlink{struct_win_params}{Win\+Params} \hyperlink{class_n_g_l_scene_aeb9511306d65832ea907ed148726e23b}{m\+\_\+win}\hypertarget{class_n_g_l_scene_aeb9511306d65832ea907ed148726e23b}{}\label{class_n_g_l_scene_aeb9511306d65832ea907ed148726e23b}
+
+\begin{DoxyCompactList}\small\item\em Window\textquotesingle{}s parameters such as mouse and rotations etc. \end{DoxyCompactList}\item 
+ngl\+::\+Mat4 \hyperlink{class_n_g_l_scene_a205162fdc65f45b4a4d956fdc60e8a4d}{m\+\_\+mouse\+Global\+TX}\hypertarget{class_n_g_l_scene_a205162fdc65f45b4a4d956fdc60e8a4d}{}\label{class_n_g_l_scene_a205162fdc65f45b4a4d956fdc60e8a4d}
+
+\begin{DoxyCompactList}\small\item\em Matrix used to store the global mouse transforms. \end{DoxyCompactList}\item 
+ngl\+::\+Camera \hyperlink{class_n_g_l_scene_a4faea2adadeaad479ff774e8345815e6}{m\+\_\+cam}\hypertarget{class_n_g_l_scene_a4faea2adadeaad479ff774e8345815e6}{}\label{class_n_g_l_scene_a4faea2adadeaad479ff774e8345815e6}
+
+\begin{DoxyCompactList}\small\item\em Our Camera. \end{DoxyCompactList}\item 
+ngl\+::\+Vec3 \hyperlink{class_n_g_l_scene_aafe232ffe5c4f03ea3095665d91c2ab3}{m\+\_\+model\+Pos}\hypertarget{class_n_g_l_scene_aafe232ffe5c4f03ea3095665d91c2ab3}{}\label{class_n_g_l_scene_aafe232ffe5c4f03ea3095665d91c2ab3}
+
+\begin{DoxyCompactList}\small\item\em Model position for mouse movement. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ ngl\+::\+Text $>$ \hyperlink{class_n_g_l_scene_a05b5509f8030ebfbf50714307850b9c9}{m\+\_\+text}\hypertarget{class_n_g_l_scene_a05b5509f8030ebfbf50714307850b9c9}{}\label{class_n_g_l_scene_a05b5509f8030ebfbf50714307850b9c9}
+
+\begin{DoxyCompactList}\small\item\em Text for rendering frame count. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+our main glwindow widget for N\+GL applications all drawing elements are put in this file 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{N\+G\+L\+Scene@{N\+G\+L\+Scene}!N\+G\+L\+Scene@{N\+G\+L\+Scene}}
+\index{N\+G\+L\+Scene@{N\+G\+L\+Scene}!N\+G\+L\+Scene@{N\+G\+L\+Scene}}
+\subsubsection[{\texorpdfstring{N\+G\+L\+Scene(\+Q\+Widget $\ast$\+\_\+parent)}{NGLScene(QWidget *\_parent)}}]{\setlength{\rightskip}{0pt plus 5cm}N\+G\+L\+Scene\+::\+N\+G\+L\+Scene (
+\begin{DoxyParamCaption}
+\item[{Q\+Widget $\ast$}]{\+\_\+parent}
+\end{DoxyParamCaption}
+)}\hypertarget{class_n_g_l_scene_a5c5abd9632cc61aa6bfbb8c237d66f27}{}\label{class_n_g_l_scene_a5c5abd9632cc61aa6bfbb8c237d66f27}
+
+
+Ctor for our N\+GL drawing class. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+parent} & Parent window to the class \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{N\+G\+L\+Scene@{N\+G\+L\+Scene}!key\+Press\+Event@{key\+Press\+Event}}
+\index{key\+Press\+Event@{key\+Press\+Event}!N\+G\+L\+Scene@{N\+G\+L\+Scene}}
+\subsubsection[{\texorpdfstring{key\+Press\+Event(\+Q\+Key\+Event $\ast$\+\_\+event) override}{keyPressEvent(QKeyEvent *\_event) override}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+G\+L\+Scene\+::key\+Press\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Key\+Event $\ast$}]{\+\_\+event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}}\hypertarget{class_n_g_l_scene_a3335e6b631a608340dee63df69a8fb53}{}\label{class_n_g_l_scene_a3335e6b631a608340dee63df69a8fb53}
+
+
+Qt Event called when a key is pressed. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+event} & Qt event to query for size etc \\
+\hline
+\end{DoxyParams}
+\index{N\+G\+L\+Scene@{N\+G\+L\+Scene}!mouse\+Move\+Event@{mouse\+Move\+Event}}
+\index{mouse\+Move\+Event@{mouse\+Move\+Event}!N\+G\+L\+Scene@{N\+G\+L\+Scene}}
+\subsubsection[{\texorpdfstring{mouse\+Move\+Event(\+Q\+Mouse\+Event $\ast$\+\_\+event) override}{mouseMoveEvent(QMouseEvent *\_event) override}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+G\+L\+Scene\+::mouse\+Move\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Mouse\+Event $\ast$}]{\+\_\+event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}}\hypertarget{class_n_g_l_scene_af4ebd25d546f7af496dfda6a2d3d7c2b}{}\label{class_n_g_l_scene_af4ebd25d546f7af496dfda6a2d3d7c2b}
+
+
+This method is called every time a mouse is moved. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+event} & Qt event structure \\
+\hline
+\end{DoxyParams}
+\index{N\+G\+L\+Scene@{N\+G\+L\+Scene}!mouse\+Press\+Event@{mouse\+Press\+Event}}
+\index{mouse\+Press\+Event@{mouse\+Press\+Event}!N\+G\+L\+Scene@{N\+G\+L\+Scene}}
+\subsubsection[{\texorpdfstring{mouse\+Press\+Event(\+Q\+Mouse\+Event $\ast$\+\_\+event) override}{mousePressEvent(QMouseEvent *\_event) override}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+G\+L\+Scene\+::mouse\+Press\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Mouse\+Event $\ast$}]{\+\_\+event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}}\hypertarget{class_n_g_l_scene_ad0df7ecbbd8f9537f66793c88b9fd831}{}\label{class_n_g_l_scene_ad0df7ecbbd8f9537f66793c88b9fd831}
+
+
+This method is called everytime the mouse button is pressed inherited from Q\+Object and overridden here. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+event} & Qt event structure \\
+\hline
+\end{DoxyParams}
+\index{N\+G\+L\+Scene@{N\+G\+L\+Scene}!mouse\+Release\+Event@{mouse\+Release\+Event}}
+\index{mouse\+Release\+Event@{mouse\+Release\+Event}!N\+G\+L\+Scene@{N\+G\+L\+Scene}}
+\subsubsection[{\texorpdfstring{mouse\+Release\+Event(\+Q\+Mouse\+Event $\ast$\+\_\+event) override}{mouseReleaseEvent(QMouseEvent *\_event) override}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+G\+L\+Scene\+::mouse\+Release\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Mouse\+Event $\ast$}]{\+\_\+event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}}\hypertarget{class_n_g_l_scene_a04223f1f8b96093e9606539ac0fc89c5}{}\label{class_n_g_l_scene_a04223f1f8b96093e9606539ac0fc89c5}
+
+
+This method is called everytime the mouse button is released inherited from Q\+Object and overridden here. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+event} & Qt event structure \\
+\hline
+\end{DoxyParams}
+\index{N\+G\+L\+Scene@{N\+G\+L\+Scene}!Pause\+Animation@{Pause\+Animation}}
+\index{Pause\+Animation@{Pause\+Animation}!N\+G\+L\+Scene@{N\+G\+L\+Scene}}
+\subsubsection[{\texorpdfstring{Pause\+Animation(bool \+\_\+pause)}{PauseAnimation(bool \_pause)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+G\+L\+Scene\+::\+Pause\+Animation (
+\begin{DoxyParamCaption}
+\item[{bool}]{\+\_\+pause}
+\end{DoxyParamCaption}
+)}\hypertarget{class_n_g_l_scene_a969ca22ec4065faebc584eb15f1eb1e0}{}\label{class_n_g_l_scene_a969ca22ec4065faebc584eb15f1eb1e0}
+
+
+Pause (or play) animation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+pause} & Used to indicate whether to pause or play the animation \\
+\hline
+\end{DoxyParams}
+\index{N\+G\+L\+Scene@{N\+G\+L\+Scene}!resize\+GL@{resize\+GL}}
+\index{resize\+GL@{resize\+GL}!N\+G\+L\+Scene@{N\+G\+L\+Scene}}
+\subsubsection[{\texorpdfstring{resize\+G\+L(int \+\_\+w, int \+\_\+h) override}{resizeGL(int \_w, int \_h) override}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+G\+L\+Scene\+::resize\+GL (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+w, }
+\item[{int}]{\+\_\+h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}}\hypertarget{class_n_g_l_scene_a84ad27896b5eccc43fdf1a8fffb507c5}{}\label{class_n_g_l_scene_a84ad27896b5eccc43fdf1a8fffb507c5}
+
+
+This is called everytime we resize the window. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+w} & Width \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+h} & Height \\
+\hline
+\end{DoxyParams}
+\index{N\+G\+L\+Scene@{N\+G\+L\+Scene}!Set\+Blending\+Options@{Set\+Blending\+Options}}
+\index{Set\+Blending\+Options@{Set\+Blending\+Options}!N\+G\+L\+Scene@{N\+G\+L\+Scene}}
+\subsubsection[{\texorpdfstring{Set\+Blending\+Options(const unsigned int \&\+\_\+start\+Frame, const unsigned int \&\+\_\+end\+Frame, const unsigned int \&\+\_\+blend\+Range, const unsigned int \&\+\_\+type)}{SetBlendingOptions(const unsigned int \&\_startFrame, const unsigned int \&\_endFrame, const unsigned int \&\_blendRange, const unsigned int \&\_type)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+G\+L\+Scene\+::\+Set\+Blending\+Options (
+\begin{DoxyParamCaption}
+\item[{const unsigned int \&}]{\+\_\+start\+Frame, }
+\item[{const unsigned int \&}]{\+\_\+end\+Frame, }
+\item[{const unsigned int \&}]{\+\_\+blend\+Range, }
+\item[{const unsigned int \&}]{\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{class_n_g_l_scene_ad93102e6a6e90c8fde65651fdd9f7e41}{}\label{class_n_g_l_scene_ad93102e6a6e90c8fde65651fdd9f7e41}
+
+
+Sets blending options chose by user through dialog window. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+start\+Frame} & Start frame number from Animation 1 \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+end\+Frame} & End frame number from Animation 2 \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+blend\+Range} & Range of frames where to perform interpolation \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+type} & Blend type (cubic or slerp) \\
+\hline
+\end{DoxyParams}
+\index{N\+G\+L\+Scene@{N\+G\+L\+Scene}!Set\+B\+V\+H\+File\+Path@{Set\+B\+V\+H\+File\+Path}}
+\index{Set\+B\+V\+H\+File\+Path@{Set\+B\+V\+H\+File\+Path}!N\+G\+L\+Scene@{N\+G\+L\+Scene}}
+\subsubsection[{\texorpdfstring{Set\+B\+V\+H\+File\+Path(const std\+::string \&\+\_\+path)}{SetBVHFilePath(const std::string \&\_path)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+G\+L\+Scene\+::\+Set\+B\+V\+H\+File\+Path (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{\+\_\+path}
+\end{DoxyParamCaption}
+)}\hypertarget{class_n_g_l_scene_a8304f04407d6eadac275b45fce81f651}{}\label{class_n_g_l_scene_a8304f04407d6eadac275b45fce81f651}
+
+
+Set B\+VH file path from gui input. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+path} & File path \\
+\hline
+\end{DoxyParams}
+\index{N\+G\+L\+Scene@{N\+G\+L\+Scene}!Set\+Current\+Motion@{Set\+Current\+Motion}}
+\index{Set\+Current\+Motion@{Set\+Current\+Motion}!N\+G\+L\+Scene@{N\+G\+L\+Scene}}
+\subsubsection[{\texorpdfstring{Set\+Current\+Motion(const int \&\+\_\+current\+Motion)}{SetCurrentMotion(const int \&\_currentMotion)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+G\+L\+Scene\+::\+Set\+Current\+Motion (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{\+\_\+current\+Motion}
+\end{DoxyParamCaption}
+)}\hypertarget{class_n_g_l_scene_ab56d4a6117937cc106f657129ee8a304}{}\label{class_n_g_l_scene_ab56d4a6117937cc106f657129ee8a304}
+
+
+Set current motion used. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+current\+Motion} & \hyperlink{class_motion}{Motion} type\+: (0, motion1) (1, motion2) (2, motion3) \\
+\hline
+\end{DoxyParams}
+\index{N\+G\+L\+Scene@{N\+G\+L\+Scene}!timer\+Event@{timer\+Event}}
+\index{timer\+Event@{timer\+Event}!N\+G\+L\+Scene@{N\+G\+L\+Scene}}
+\subsubsection[{\texorpdfstring{timer\+Event(\+Q\+Timer\+Event $\ast$\+\_\+event) override}{timerEvent(QTimerEvent *\_event) override}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+G\+L\+Scene\+::timer\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Timer\+Event $\ast$}]{\+\_\+event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}}\hypertarget{class_n_g_l_scene_adaf5940c83dc00d8a9960bab5e6914c0}{}\label{class_n_g_l_scene_adaf5940c83dc00d8a9960bab5e6914c0}
+
+
+Timer event triggered by start\+Timer() 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+event} & Qt event structure \\
+\hline
+\end{DoxyParams}
+\index{N\+G\+L\+Scene@{N\+G\+L\+Scene}!wheel\+Event@{wheel\+Event}}
+\index{wheel\+Event@{wheel\+Event}!N\+G\+L\+Scene@{N\+G\+L\+Scene}}
+\subsubsection[{\texorpdfstring{wheel\+Event(\+Q\+Wheel\+Event $\ast$\+\_\+event) override}{wheelEvent(QWheelEvent *\_event) override}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+G\+L\+Scene\+::wheel\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Wheel\+Event $\ast$}]{\+\_\+event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}}\hypertarget{class_n_g_l_scene_a8c32596b941a6a38515378e309ee6f02}{}\label{class_n_g_l_scene_a8c32596b941a6a38515378e309ee6f02}
+
+
+This method is called everytime the mouse wheel is moved inherited from Q\+Object and overridden here. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+event} & Qt event structure \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_n_g_l_scene_8h}{N\+G\+L\+Scene.\+h}\end{DoxyCompactItemize}

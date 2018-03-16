@@ -1,0 +1,295 @@
+\hypertarget{class_skeleton}{}\section{Skeleton Class Reference}
+\label{class_skeleton}\index{Skeleton@{Skeleton}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_skeleton_af01a02f1ce9ae4c801cd6e66ccf7407f}{Skeleton} ()\hypertarget{class_skeleton_af01a02f1ce9ae4c801cd6e66ccf7407f}{}\label{class_skeleton_af01a02f1ce9ae4c801cd6e66ccf7407f}
+
+\begin{DoxyCompactList}\small\item\em Default ctor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_skeleton_ace814d0861f07ead8c64ed5fb47ff1bd}{Init} (std\+::istream \&\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Initialise method. \end{DoxyCompactList}\item 
+void \hyperlink{class_skeleton_ab22b3932632e4e6a0eaca71403161186}{Pre\+Process\+Motion\+Data} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{class_frame}{Frame} $>$ $>$ \+\_\+frames)
+\begin{DoxyCompactList}\small\item\em Process data loaded from motion section in relation to the skeleton. \end{DoxyCompactList}\item 
+void \hyperlink{class_skeleton_a4a23dfa92a6e3ad0d8e8ac8d003e2100}{Update} (const unsigned int \&\+\_\+current\+Frame)
+\begin{DoxyCompactList}\small\item\em Update method. \end{DoxyCompactList}\item 
+void \hyperlink{class_skeleton_ad26c45243ff907c4f383e1e8f144be44}{Update\+V\+AO} (const unsigned int \&\+\_\+current\+Frame)
+\begin{DoxyCompactList}\small\item\em Update the skeleton V\+AO. \end{DoxyCompactList}\item 
+bool \hyperlink{class_skeleton_ae41174e6b1a767f0cf7f6b5a5d0ddf03}{Load} (std\+::istream \&\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Load B\+VH data from file. \end{DoxyCompactList}\item 
+void \hyperlink{class_skeleton_a9ccd597aa1ab7e0c2a01d52b01ff5261}{Draw} ()\hypertarget{class_skeleton_a9ccd597aa1ab7e0c2a01d52b01ff5261}{}\label{class_skeleton_a9ccd597aa1ab7e0c2a01d52b01ff5261}
+
+\begin{DoxyCompactList}\small\item\em Draw method. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{struct_joint}{Joint} $>$ \hyperlink{class_skeleton_a6c730a39dbc19aa10218dcbd2c551d78}{Get\+Root\+Joint} () const
+\begin{DoxyCompactList}\small\item\em Get root joint. \end{DoxyCompactList}\item 
+ngl\+::\+Vec3 \hyperlink{class_skeleton_a9e0c1df8b4a419f3a482dda48c66499c}{Get\+Skeleton\+Vertices} (const std\+::shared\+\_\+ptr$<$ \hyperlink{struct_joint}{Joint} $>$ \+\_\+joint, const unsigned int \&\+\_\+frame)
+\begin{DoxyCompactList}\small\item\em Retrives vertices for each joint of the skeleton for drawing purposes. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_skeleton_a1c5de922c9e3bed948854d7b2ec529c8}{Get\+Num\+D\+OF} () const
+\begin{DoxyCompactList}\small\item\em Get number of degrees of freedom. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_skeleton_a309b630523f58624f8ee9e394bc75b54}{Get\+Num\+Joints} () const
+\begin{DoxyCompactList}\small\item\em Returns number of joints in skeleton. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_skeleton_a584118808ccd4a174248a97a423c9b3f}{Load\+Hierarchy} (std\+::istream \&\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Parse hierarchy data. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{struct_joint}{Joint} $>$ \hyperlink{class_skeleton_af799626d6940e89cd691a811142b8c36}{Load\+Joint} (std\+::istream \&\+\_\+str, Tokenizer\+::iterator \&\+\_\+first\+Word, std\+::shared\+\_\+ptr$<$ \hyperlink{struct_joint}{Joint} $>$ \+\_\+parent)
+\begin{DoxyCompactList}\small\item\em Parse joint data. \end{DoxyCompactList}\item 
+void \hyperlink{class_skeleton_ad75fdf078c80de43d9c79c74a7b6dc5f}{Create\+V\+AO} ()\hypertarget{class_skeleton_ad75fdf078c80de43d9c79c74a7b6dc5f}{}\label{class_skeleton_ad75fdf078c80de43d9c79c74a7b6dc5f}
+
+\begin{DoxyCompactList}\small\item\em Creates the skeleton vao for drawing. \end{DoxyCompactList}\item 
+void \hyperlink{class_skeleton_ad426f8620296e4f8819556fe4f3c16cd}{Extract\+Verts} (std\+::shared\+\_\+ptr$<$ \hyperlink{struct_joint}{Joint} $>$ \+\_\+joint, std\+::vector$<$ ngl\+::\+Vec3 $>$ \&\+\_\+verts, std\+::vector$<$ G\+Lshort $>$ \&\+\_\+indices, G\+Lshort \+\_\+parent\+Index, const unsigned int \&\+\_\+current\+Frame)
+\begin{DoxyCompactList}\small\item\em Get vertices and indices to draw skeleton. \end{DoxyCompactList}\item 
+void \hyperlink{class_skeleton_a0bc65074541c9e198d8cb72d46d01e06}{Extract\+Data\+From\+Frame} (std\+::shared\+\_\+ptr$<$ \hyperlink{struct_joint}{Joint} $>$ \+\_\+joint, std\+::shared\+\_\+ptr$<$ \hyperlink{class_frame}{Frame} $>$ \+\_\+frame)
+\begin{DoxyCompactList}\small\item\em This method extracts translation and rotation data previously stored in each frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{struct_joint}{Joint} $>$ \hyperlink{class_skeleton_ae4aa6e48bbc4d30abc1d2624f2ebc63c}{m\+\_\+root}\hypertarget{class_skeleton_ae4aa6e48bbc4d30abc1d2624f2ebc63c}{}\label{class_skeleton_ae4aa6e48bbc4d30abc1d2624f2ebc63c}
+
+\begin{DoxyCompactList}\small\item\em Root joint. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_skeleton_a98a7d74e50ea3212efdb473c7e3ab5a9}{m\+\_\+num\+Joints}\hypertarget{class_skeleton_a98a7d74e50ea3212efdb473c7e3ab5a9}{}\label{class_skeleton_a98a7d74e50ea3212efdb473c7e3ab5a9}
+
+\begin{DoxyCompactList}\small\item\em Holds number of joints in skeleton. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_skeleton_ab01e07c987685ee694322ddb284aa6fb}{m\+\_\+num\+D\+OF}\hypertarget{class_skeleton_ab01e07c987685ee694322ddb284aa6fb}{}\label{class_skeleton_ab01e07c987685ee694322ddb284aa6fb}
+
+\begin{DoxyCompactList}\small\item\em Holds total number of degrees of freedom. \end{DoxyCompactList}\item 
+boost\+::char\+\_\+separator$<$ char $>$ \hyperlink{class_skeleton_aa6c2c251924399763602cd57df4e81f3}{m\+\_\+separators}\hypertarget{class_skeleton_aa6c2c251924399763602cd57df4e81f3}{}\label{class_skeleton_aa6c2c251924399763602cd57df4e81f3}
+
+\begin{DoxyCompactList}\small\item\em Delimeters for tokenizer. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ ngl\+::\+Abstract\+V\+AO $>$ \hyperlink{class_skeleton_ae289df69aaf63b1cc66aac959a72c0df}{m\+\_\+vao}\hypertarget{class_skeleton_ae289df69aaf63b1cc66aac959a72c0df}{}\label{class_skeleton_ae289df69aaf63b1cc66aac959a72c0df}
+
+\begin{DoxyCompactList}\small\item\em Vertex array object for drawing skeleton. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Skeleton@{Skeleton}!Extract\+Data\+From\+Frame@{Extract\+Data\+From\+Frame}}
+\index{Extract\+Data\+From\+Frame@{Extract\+Data\+From\+Frame}!Skeleton@{Skeleton}}
+\subsubsection[{\texorpdfstring{Extract\+Data\+From\+Frame(std\+::shared\+\_\+ptr$<$ Joint $>$ \+\_\+joint, std\+::shared\+\_\+ptr$<$ Frame $>$ \+\_\+frame)}{ExtractDataFromFrame(std::shared\_ptr< Joint > \_joint, std::shared\_ptr< Frame > \_frame)}}]{\setlength{\rightskip}{0pt plus 5cm}void Skeleton\+::\+Extract\+Data\+From\+Frame (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Joint} $>$}]{\+\_\+joint, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Frame} $>$}]{\+\_\+frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_skeleton_a0bc65074541c9e198d8cb72d46d01e06}{}\label{class_skeleton_a0bc65074541c9e198d8cb72d46d01e06}
+
+
+This method extracts translation and rotation data previously stored in each frame. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+joint} & Current joint \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+frame} & Current frame \\
+\hline
+\end{DoxyParams}
+\index{Skeleton@{Skeleton}!Extract\+Verts@{Extract\+Verts}}
+\index{Extract\+Verts@{Extract\+Verts}!Skeleton@{Skeleton}}
+\subsubsection[{\texorpdfstring{Extract\+Verts(std\+::shared\+\_\+ptr$<$ Joint $>$ \+\_\+joint, std\+::vector$<$ ngl\+::\+Vec3 $>$ \&\+\_\+verts, std\+::vector$<$ G\+Lshort $>$ \&\+\_\+indices, G\+Lshort \+\_\+parent\+Index, const unsigned int \&\+\_\+current\+Frame)}{ExtractVerts(std::shared\_ptr< Joint > \_joint, std::vector< ngl::Vec3 > \&\_verts, std::vector< GLshort > \&\_indices, GLshort \_parentIndex, const unsigned int \&\_currentFrame)}}]{\setlength{\rightskip}{0pt plus 5cm}void Skeleton\+::\+Extract\+Verts (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Joint} $>$}]{\+\_\+joint, }
+\item[{std\+::vector$<$ ngl\+::\+Vec3 $>$ \&}]{\+\_\+verts, }
+\item[{std\+::vector$<$ G\+Lshort $>$ \&}]{\+\_\+indices, }
+\item[{G\+Lshort}]{\+\_\+parent\+Index, }
+\item[{const unsigned int \&}]{\+\_\+current\+Frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_skeleton_ad426f8620296e4f8819556fe4f3c16cd}{}\label{class_skeleton_ad426f8620296e4f8819556fe4f3c16cd}
+
+
+Get vertices and indices to draw skeleton. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+joint} & \hyperlink{struct_joint}{Joint} \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+verts} & Vertex container \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+indices} & Index container \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+parent\+Index} & Parent joint index \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+current\+Frame} & Current frame \\
+\hline
+\end{DoxyParams}
+\index{Skeleton@{Skeleton}!Get\+Num\+D\+OF@{Get\+Num\+D\+OF}}
+\index{Get\+Num\+D\+OF@{Get\+Num\+D\+OF}!Skeleton@{Skeleton}}
+\subsubsection[{\texorpdfstring{Get\+Num\+D\+O\+F() const}{GetNumDOF() const}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Skeleton\+::\+Get\+Num\+D\+OF (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_skeleton_a1c5de922c9e3bed948854d7b2ec529c8}{}\label{class_skeleton_a1c5de922c9e3bed948854d7b2ec529c8}
+
+
+Get number of degrees of freedom. 
+
+\begin{DoxyReturn}{Returns}
+m\+\_\+num\+D\+OF Number of degrees of freedom 
+\end{DoxyReturn}
+\index{Skeleton@{Skeleton}!Get\+Num\+Joints@{Get\+Num\+Joints}}
+\index{Get\+Num\+Joints@{Get\+Num\+Joints}!Skeleton@{Skeleton}}
+\subsubsection[{\texorpdfstring{Get\+Num\+Joints() const}{GetNumJoints() const}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Skeleton\+::\+Get\+Num\+Joints (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_skeleton_a309b630523f58624f8ee9e394bc75b54}{}\label{class_skeleton_a309b630523f58624f8ee9e394bc75b54}
+
+
+Returns number of joints in skeleton. 
+
+\begin{DoxyReturn}{Returns}
+m\+\_\+num\+Joints Total number of joints 
+\end{DoxyReturn}
+\index{Skeleton@{Skeleton}!Get\+Root\+Joint@{Get\+Root\+Joint}}
+\index{Get\+Root\+Joint@{Get\+Root\+Joint}!Skeleton@{Skeleton}}
+\subsubsection[{\texorpdfstring{Get\+Root\+Joint() const}{GetRootJoint() const}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf Joint} $>$ Skeleton\+::\+Get\+Root\+Joint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_skeleton_a6c730a39dbc19aa10218dcbd2c551d78}{}\label{class_skeleton_a6c730a39dbc19aa10218dcbd2c551d78}
+
+
+Get root joint. 
+
+\begin{DoxyReturn}{Returns}
+m\+\_\+root 
+\end{DoxyReturn}
+\index{Skeleton@{Skeleton}!Get\+Skeleton\+Vertices@{Get\+Skeleton\+Vertices}}
+\index{Get\+Skeleton\+Vertices@{Get\+Skeleton\+Vertices}!Skeleton@{Skeleton}}
+\subsubsection[{\texorpdfstring{Get\+Skeleton\+Vertices(const std\+::shared\+\_\+ptr$<$ Joint $>$ \+\_\+joint, const unsigned int \&\+\_\+frame)}{GetSkeletonVertices(const std::shared\_ptr< Joint > \_joint, const unsigned int \&\_frame)}}]{\setlength{\rightskip}{0pt plus 5cm}ngl\+::\+Vec3 Skeleton\+::\+Get\+Skeleton\+Vertices (
+\begin{DoxyParamCaption}
+\item[{const std\+::shared\+\_\+ptr$<$ {\bf Joint} $>$}]{\+\_\+joint, }
+\item[{const unsigned int \&}]{\+\_\+frame}
+\end{DoxyParamCaption}
+)}\hypertarget{class_skeleton_a9e0c1df8b4a419f3a482dda48c66499c}{}\label{class_skeleton_a9e0c1df8b4a419f3a482dda48c66499c}
+
+
+Retrives vertices for each joint of the skeleton for drawing purposes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+joint} & Current joint \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+frame} & Current frame number \\
+\hline
+\end{DoxyParams}
+\index{Skeleton@{Skeleton}!Init@{Init}}
+\index{Init@{Init}!Skeleton@{Skeleton}}
+\subsubsection[{\texorpdfstring{Init(std\+::istream \&\+\_\+str)}{Init(std::istream \&\_str)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Skeleton\+::\+Init (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{\+\_\+str}
+\end{DoxyParamCaption}
+)}\hypertarget{class_skeleton_ace814d0861f07ead8c64ed5fb47ff1bd}{}\label{class_skeleton_ace814d0861f07ead8c64ed5fb47ff1bd}
+
+
+Initialise method. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+str} & File stream \\
+\hline
+\end{DoxyParams}
+\index{Skeleton@{Skeleton}!Load@{Load}}
+\index{Load@{Load}!Skeleton@{Skeleton}}
+\subsubsection[{\texorpdfstring{Load(std\+::istream \&\+\_\+str)}{Load(std::istream \&\_str)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Skeleton\+::\+Load (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{\+\_\+str}
+\end{DoxyParamCaption}
+)}\hypertarget{class_skeleton_ae41174e6b1a767f0cf7f6b5a5d0ddf03}{}\label{class_skeleton_ae41174e6b1a767f0cf7f6b5a5d0ddf03}
+
+
+Load B\+VH data from file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+str} & .bvh file stream \\
+\hline
+\end{DoxyParams}
+\index{Skeleton@{Skeleton}!Load\+Hierarchy@{Load\+Hierarchy}}
+\index{Load\+Hierarchy@{Load\+Hierarchy}!Skeleton@{Skeleton}}
+\subsubsection[{\texorpdfstring{Load\+Hierarchy(std\+::istream \&\+\_\+str)}{LoadHierarchy(std::istream \&\_str)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Skeleton\+::\+Load\+Hierarchy (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{\+\_\+str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_skeleton_a584118808ccd4a174248a97a423c9b3f}{}\label{class_skeleton_a584118808ccd4a174248a97a423c9b3f}
+
+
+Parse hierarchy data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+str} & Opened .bvh file \\
+\hline
+\end{DoxyParams}
+\index{Skeleton@{Skeleton}!Load\+Joint@{Load\+Joint}}
+\index{Load\+Joint@{Load\+Joint}!Skeleton@{Skeleton}}
+\subsubsection[{\texorpdfstring{Load\+Joint(std\+::istream \&\+\_\+str, Tokenizer\+::iterator \&\+\_\+first\+Word, std\+::shared\+\_\+ptr$<$ Joint $>$ \+\_\+parent)}{LoadJoint(std::istream \&\_str, Tokenizer::iterator \&\_firstWord, std::shared\_ptr< Joint > \_parent)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf Joint} $>$ Skeleton\+::\+Load\+Joint (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{\+\_\+str, }
+\item[{Tokenizer\+::iterator \&}]{\+\_\+first\+Word, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Joint} $>$}]{\+\_\+parent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_skeleton_af799626d6940e89cd691a811142b8c36}{}\label{class_skeleton_af799626d6940e89cd691a811142b8c36}
+
+
+Parse joint data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+str} & Opened .bvh file \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+first\+Word} & First token \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+parent} & Parent joint \\
+\hline
+\end{DoxyParams}
+\index{Skeleton@{Skeleton}!Pre\+Process\+Motion\+Data@{Pre\+Process\+Motion\+Data}}
+\index{Pre\+Process\+Motion\+Data@{Pre\+Process\+Motion\+Data}!Skeleton@{Skeleton}}
+\subsubsection[{\texorpdfstring{Pre\+Process\+Motion\+Data(std\+::vector$<$ std\+::shared\+\_\+ptr$<$ Frame $>$ $>$ \+\_\+frames)}{PreProcessMotionData(std::vector< std::shared\_ptr< Frame > > \_frames)}}]{\setlength{\rightskip}{0pt plus 5cm}void Skeleton\+::\+Pre\+Process\+Motion\+Data (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ {\bf Frame} $>$ $>$}]{\+\_\+frames}
+\end{DoxyParamCaption}
+)}\hypertarget{class_skeleton_ab22b3932632e4e6a0eaca71403161186}{}\label{class_skeleton_ab22b3932632e4e6a0eaca71403161186}
+
+
+Process data loaded from motion section in relation to the skeleton. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+frames} & All frames of the animation \\
+\hline
+\end{DoxyParams}
+\index{Skeleton@{Skeleton}!Update@{Update}}
+\index{Update@{Update}!Skeleton@{Skeleton}}
+\subsubsection[{\texorpdfstring{Update(const unsigned int \&\+\_\+current\+Frame)}{Update(const unsigned int \&\_currentFrame)}}]{\setlength{\rightskip}{0pt plus 5cm}void Skeleton\+::\+Update (
+\begin{DoxyParamCaption}
+\item[{const unsigned int \&}]{\+\_\+current\+Frame}
+\end{DoxyParamCaption}
+)}\hypertarget{class_skeleton_a4a23dfa92a6e3ad0d8e8ac8d003e2100}{}\label{class_skeleton_a4a23dfa92a6e3ad0d8e8ac8d003e2100}
+
+
+Update method. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+current\+Frame} & Current frame \\
+\hline
+\end{DoxyParams}
+\index{Skeleton@{Skeleton}!Update\+V\+AO@{Update\+V\+AO}}
+\index{Update\+V\+AO@{Update\+V\+AO}!Skeleton@{Skeleton}}
+\subsubsection[{\texorpdfstring{Update\+V\+A\+O(const unsigned int \&\+\_\+current\+Frame)}{UpdateVAO(const unsigned int \&\_currentFrame)}}]{\setlength{\rightskip}{0pt plus 5cm}void Skeleton\+::\+Update\+V\+AO (
+\begin{DoxyParamCaption}
+\item[{const unsigned int \&}]{\+\_\+current\+Frame}
+\end{DoxyParamCaption}
+)}\hypertarget{class_skeleton_ad26c45243ff907c4f383e1e8f144be44}{}\label{class_skeleton_ad26c45243ff907c4f383e1e8f144be44}
+
+
+Update the skeleton V\+AO. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+current\+Frame} & Current frame \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_skeleton_8h}{Skeleton.\+h}\end{DoxyCompactItemize}

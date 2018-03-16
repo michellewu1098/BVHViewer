@@ -1,0 +1,181 @@
+\hypertarget{class_character}{}\section{Character Class Reference}
+\label{class_character}\index{Character@{Character}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_character_a5b18aefe95ea78651499c858da123fd1}{Motion\+Type} \{ {\bfseries M\+O\+T\+I\+O\+N1}, 
+{\bfseries M\+O\+T\+I\+O\+N2}, 
+{\bfseries B\+L\+E\+N\+D\+ED}
+ \}\hypertarget{class_character_a5b18aefe95ea78651499c858da123fd1}{}\label{class_character_a5b18aefe95ea78651499c858da123fd1}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_motion}{Motion} types. \end{DoxyCompactList}
+\item 
+enum \hyperlink{class_character_a9bc67e2e9074936984ca7e0628743480}{Blend\+Type} \{ {\bfseries C\+U\+B\+IC}, 
+{\bfseries S\+L\+E\+RP}
+ \}\hypertarget{class_character_a9bc67e2e9074936984ca7e0628743480}{}\label{class_character_a9bc67e2e9074936984ca7e0628743480}
+\begin{DoxyCompactList}\small\item\em Blend/interpolation types. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_character_adc27bdd255876169bad2ed0bae0cffb5}{Character} ()\hypertarget{class_character_adc27bdd255876169bad2ed0bae0cffb5}{}\label{class_character_adc27bdd255876169bad2ed0bae0cffb5}
+
+\begin{DoxyCompactList}\small\item\em Ctor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_character_a421006ac40b2fa45f0ff7f4ed4cef814}{Load\+B\+V\+H\+File} (const std\+::string \&\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Loads .bvh file. \end{DoxyCompactList}\item 
+void \hyperlink{class_character_a0f024c74060ed6fdf234380fc9f4c098}{Update} ()\hypertarget{class_character_a0f024c74060ed6fdf234380fc9f4c098}{}\label{class_character_a0f024c74060ed6fdf234380fc9f4c098}
+
+\begin{DoxyCompactList}\small\item\em Updates skeleton structure. \end{DoxyCompactList}\item 
+void \hyperlink{class_character_a681d67b227b0f7abb8508958841c6976}{Draw} ()\hypertarget{class_character_a681d67b227b0f7abb8508958841c6976}{}\label{class_character_a681d67b227b0f7abb8508958841c6976}
+
+\begin{DoxyCompactList}\small\item\em Draws skeleton. \end{DoxyCompactList}\item 
+void \hyperlink{class_character_a9dd3b1390a8842b49bab69d9a30c398e}{Preprocess\+Data} ()\hypertarget{class_character_a9dd3b1390a8842b49bab69d9a30c398e}{}\label{class_character_a9dd3b1390a8842b49bab69d9a30c398e}
+
+\begin{DoxyCompactList}\small\item\em Preprocesses motion data for skeleton. \end{DoxyCompactList}\item 
+void \hyperlink{class_character_a2a6a73355dc0b94f54b0466bd00222aa}{Set\+Current\+Motion} (const int \&\+\_\+motion)
+\begin{DoxyCompactList}\small\item\em Set current motion used. \end{DoxyCompactList}\item 
+bool \hyperlink{class_character_ac4c00fc262864fbd016326ff1f14a6fe}{Blending\+Ready} (unsigned int \&\+\_\+frame\+Count0, unsigned int \&\+\_\+frame\+Count1)
+\begin{DoxyCompactList}\small\item\em Checks if system is ready for blending/interpolation. \end{DoxyCompactList}\item 
+void \hyperlink{class_character_a248ec48c8b954aae5285a81c1fc92bd7}{Blend} (const unsigned int \&\+\_\+start\+Frame, const unsigned int \&\+\_\+end\+Frame, const unsigned int \&\+\_\+blend\+Range, const unsigned int \&\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Performs interpolation between frames. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_character_a1902ad24234f8fb5b40f065c2bd3c6a1}{Get\+Num\+Frames} () const\hypertarget{class_character_a1902ad24234f8fb5b40f065c2bd3c6a1}{}\label{class_character_a1902ad24234f8fb5b40f065c2bd3c6a1}
+
+\begin{DoxyCompactList}\small\item\em Returns total numbers of frames in .bvh file. \end{DoxyCompactList}\item 
+float \hyperlink{class_character_a7f504a9a691124b258dcf2e579198b79}{Get\+Frame\+Rate} () const\hypertarget{class_character_a7f504a9a691124b258dcf2e579198b79}{}\label{class_character_a7f504a9a691124b258dcf2e579198b79}
+
+\begin{DoxyCompactList}\small\item\em Returns frame rate of animation. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_character_a9855a5241e3e60efb9bc258ec02ad000}{Get\+Current\+Frame} () const
+\begin{DoxyCompactList}\small\item\em Returns current frame. \end{DoxyCompactList}\item 
+void \hyperlink{class_character_a55a31c755a92e0f5dcb264004350dd4e}{Backward\+Animation} ()\hypertarget{class_character_a55a31c755a92e0f5dcb264004350dd4e}{}\label{class_character_a55a31c755a92e0f5dcb264004350dd4e}
+
+\begin{DoxyCompactList}\small\item\em Sets animation to play backward. \end{DoxyCompactList}\item 
+void \hyperlink{class_character_ae31c697a6108c3e114815b1d95be80d9}{Forward\+Animation} ()\hypertarget{class_character_ae31c697a6108c3e114815b1d95be80d9}{}\label{class_character_ae31c697a6108c3e114815b1d95be80d9}
+
+\begin{DoxyCompactList}\small\item\em Sets animation to play forward. \end{DoxyCompactList}\item 
+void \hyperlink{class_character_a57701fbb44ec55932b780d01a12195c7}{Set\+Forward\+Animation} ()\hypertarget{class_character_a57701fbb44ec55932b780d01a12195c7}{}\label{class_character_a57701fbb44ec55932b780d01a12195c7}
+
+\begin{DoxyCompactList}\small\item\em Increases/decreases frames for animation. \end{DoxyCompactList}\item 
+void \hyperlink{class_character_a6ffa431ffdcb6e6eb5ca3d0b46d8be2c}{Reset\+Animation} ()\hypertarget{class_character_a6ffa431ffdcb6e6eb5ca3d0b46d8be2c}{}\label{class_character_a6ffa431ffdcb6e6eb5ca3d0b46d8be2c}
+
+\begin{DoxyCompactList}\small\item\em Reset animation froms start. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_skeleton}{Skeleton} \hyperlink{class_character_a5f393a396da1aecf291a641b76f80222}{m\+\_\+skeleton}\hypertarget{class_character_a5f393a396da1aecf291a641b76f80222}{}\label{class_character_a5f393a396da1aecf291a641b76f80222}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_skeleton}{Skeleton} structure. \end{DoxyCompactList}\item 
+\hyperlink{class_motion}{Motion} $\ast$ \hyperlink{class_character_ae62826de94da6c220da5daf60b5bb7db}{m\+\_\+current\+Motion} = nullptr\hypertarget{class_character_ae62826de94da6c220da5daf60b5bb7db}{}\label{class_character_ae62826de94da6c220da5daf60b5bb7db}
+
+\begin{DoxyCompactList}\small\item\em Current motion associated to skeleton. \end{DoxyCompactList}\item 
+\hyperlink{class_motion}{Motion} \hyperlink{class_character_a35a57256ebba2a5aacd270711879027e}{m\+\_\+motion1}\hypertarget{class_character_a35a57256ebba2a5aacd270711879027e}{}\label{class_character_a35a57256ebba2a5aacd270711879027e}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_motion}{Motion} data for Animation 1. \end{DoxyCompactList}\item 
+\hyperlink{class_motion}{Motion} \hyperlink{class_character_a9f9c7ede39a8974a3d0107ecbaffd916}{m\+\_\+motion2}\hypertarget{class_character_a9f9c7ede39a8974a3d0107ecbaffd916}{}\label{class_character_a9f9c7ede39a8974a3d0107ecbaffd916}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_motion}{Motion} data for Animation 2. \end{DoxyCompactList}\item 
+\hyperlink{class_motion}{Motion} \hyperlink{class_character_a151f601061296aed2990702934ded822}{m\+\_\+motion3}\hypertarget{class_character_a151f601061296aed2990702934ded822}{}\label{class_character_a151f601061296aed2990702934ded822}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_motion}{Motion} data for Blended Animation of Anim1 and Anim2. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_character_a90785d0cfa24e73bbc900a43fe474ff0}{m\+\_\+current\+Frame}\hypertarget{class_character_a90785d0cfa24e73bbc900a43fe474ff0}{}\label{class_character_a90785d0cfa24e73bbc900a43fe474ff0}
+
+\begin{DoxyCompactList}\small\item\em Current frame. \end{DoxyCompactList}\item 
+bool \hyperlink{class_character_ac5745213bdede1efa35cd73508829f0e}{m\+\_\+is\+Forward\+Animation}\hypertarget{class_character_ac5745213bdede1efa35cd73508829f0e}{}\label{class_character_ac5745213bdede1efa35cd73508829f0e}
+
+\begin{DoxyCompactList}\small\item\em Handles if animation is being played backward or forward. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Character@{Character}!Blend@{Blend}}
+\index{Blend@{Blend}!Character@{Character}}
+\subsubsection[{\texorpdfstring{Blend(const unsigned int \&\+\_\+start\+Frame, const unsigned int \&\+\_\+end\+Frame, const unsigned int \&\+\_\+blend\+Range, const unsigned int \&\+\_\+type)}{Blend(const unsigned int \&\_startFrame, const unsigned int \&\_endFrame, const unsigned int \&\_blendRange, const unsigned int \&\_type)}}]{\setlength{\rightskip}{0pt plus 5cm}void Character\+::\+Blend (
+\begin{DoxyParamCaption}
+\item[{const unsigned int \&}]{\+\_\+start\+Frame, }
+\item[{const unsigned int \&}]{\+\_\+end\+Frame, }
+\item[{const unsigned int \&}]{\+\_\+blend\+Range, }
+\item[{const unsigned int \&}]{\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{class_character_a248ec48c8b954aae5285a81c1fc92bd7}{}\label{class_character_a248ec48c8b954aae5285a81c1fc92bd7}
+
+
+Performs interpolation between frames. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+start\+Frame} & Start frame number from Animation 1 \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+end\+Frame} & End frame number from Animation 2 \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+blend\+Range} & Range of frames where to perform interpolation \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+type} & Blend type (cubic or slerp) \\
+\hline
+\end{DoxyParams}
+\index{Character@{Character}!Blending\+Ready@{Blending\+Ready}}
+\index{Blending\+Ready@{Blending\+Ready}!Character@{Character}}
+\subsubsection[{\texorpdfstring{Blending\+Ready(unsigned int \&\+\_\+frame\+Count0, unsigned int \&\+\_\+frame\+Count1)}{BlendingReady(unsigned int \&\_frameCount0, unsigned int \&\_frameCount1)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Character\+::\+Blending\+Ready (
+\begin{DoxyParamCaption}
+\item[{unsigned int \&}]{\+\_\+frame\+Count0, }
+\item[{unsigned int \&}]{\+\_\+frame\+Count1}
+\end{DoxyParamCaption}
+)}\hypertarget{class_character_ac4c00fc262864fbd016326ff1f14a6fe}{}\label{class_character_ac4c00fc262864fbd016326ff1f14a6fe}
+
+
+Checks if system is ready for blending/interpolation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+frame\+Count0} & \hyperlink{class_frame}{Frame} count for Animation 1 \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+frame\+Count1} & \hyperlink{class_frame}{Frame} count for Animation 2 \\
+\hline
+\end{DoxyParams}
+\index{Character@{Character}!Get\+Current\+Frame@{Get\+Current\+Frame}}
+\index{Get\+Current\+Frame@{Get\+Current\+Frame}!Character@{Character}}
+\subsubsection[{\texorpdfstring{Get\+Current\+Frame() const}{GetCurrentFrame() const}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Character\+::\+Get\+Current\+Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_character_a9855a5241e3e60efb9bc258ec02ad000}{}\label{class_character_a9855a5241e3e60efb9bc258ec02ad000}
+
+
+Returns current frame. 
+
+\begin{DoxyReturn}{Returns}
+m\+\_\+current\+Frame Current frame 
+\end{DoxyReturn}
+\index{Character@{Character}!Load\+B\+V\+H\+File@{Load\+B\+V\+H\+File}}
+\index{Load\+B\+V\+H\+File@{Load\+B\+V\+H\+File}!Character@{Character}}
+\subsubsection[{\texorpdfstring{Load\+B\+V\+H\+File(const std\+::string \&\+\_\+path)}{LoadBVHFile(const std::string \&\_path)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Character\+::\+Load\+B\+V\+H\+File (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{\+\_\+path}
+\end{DoxyParamCaption}
+)}\hypertarget{class_character_a421006ac40b2fa45f0ff7f4ed4cef814}{}\label{class_character_a421006ac40b2fa45f0ff7f4ed4cef814}
+
+
+Loads .bvh file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+path} & Path to file \\
+\hline
+\end{DoxyParams}
+\index{Character@{Character}!Set\+Current\+Motion@{Set\+Current\+Motion}}
+\index{Set\+Current\+Motion@{Set\+Current\+Motion}!Character@{Character}}
+\subsubsection[{\texorpdfstring{Set\+Current\+Motion(const int \&\+\_\+motion)}{SetCurrentMotion(const int \&\_motion)}}]{\setlength{\rightskip}{0pt plus 5cm}void Character\+::\+Set\+Current\+Motion (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{\+\_\+motion}
+\end{DoxyParamCaption}
+)}\hypertarget{class_character_a2a6a73355dc0b94f54b0466bd00222aa}{}\label{class_character_a2a6a73355dc0b94f54b0466bd00222aa}
+
+
+Set current motion used. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+motion} & \hyperlink{class_motion}{Motion} type\+: (0, motion1) (1, motion2) (2, motion3) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_character_8h}{Character.\+h}\end{DoxyCompactItemize}

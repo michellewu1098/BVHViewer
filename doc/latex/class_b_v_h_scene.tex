@@ -1,0 +1,205 @@
+\hypertarget{class_b_v_h_scene}{}\section{B\+V\+H\+Scene Class Reference}
+\label{class_b_v_h_scene}\index{B\+V\+H\+Scene@{B\+V\+H\+Scene}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_b_v_h_scene_af671a3bf31dcf9ebeed27d1e42d141fb}{B\+V\+H\+Scene} ()\hypertarget{class_b_v_h_scene_af671a3bf31dcf9ebeed27d1e42d141fb}{}\label{class_b_v_h_scene_af671a3bf31dcf9ebeed27d1e42d141fb}
+
+\begin{DoxyCompactList}\small\item\em Default ctor. \end{DoxyCompactList}\item 
+\hyperlink{class_b_v_h_scene_abc611b85e4943d2f9fd9b4a240d3ba7b}{$\sim$\+B\+V\+H\+Scene} ()\hypertarget{class_b_v_h_scene_abc611b85e4943d2f9fd9b4a240d3ba7b}{}\label{class_b_v_h_scene_abc611b85e4943d2f9fd9b4a240d3ba7b}
+
+\begin{DoxyCompactList}\small\item\em Dtor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_b_v_h_scene_aa9039eebbea8cbc0fef88323a7f8bd41}{Load\+B\+V\+H\+File} (const std\+::string \&\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Load .bvh file. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_v_h_scene_a5f104d324cb3fa81dbddf16489304a12}{Update} ()\hypertarget{class_b_v_h_scene_a5f104d324cb3fa81dbddf16489304a12}{}\label{class_b_v_h_scene_a5f104d324cb3fa81dbddf16489304a12}
+
+\begin{DoxyCompactList}\small\item\em Update method. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_v_h_scene_a405f59e41378e5c758937281657947d9}{Draw} (const ngl\+::\+Mat4 \&\+\_\+global\+Mat, ngl\+::\+Camera \&\+\_\+cam)
+\begin{DoxyCompactList}\small\item\em Draw method for character in scene. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_v_h_scene_ab01f9d83c1a35b25c9264ad92665522d}{Draw\+Floor} (const ngl\+::\+Mat4 \&\+\_\+global\+Mat, ngl\+::\+Camera \&\+\_\+cam)
+\begin{DoxyCompactList}\small\item\em Draw method for floor. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_v_h_scene_aed67a997059b478b6088c353ec1d2b2b}{Load\+Matrices\+To\+Shader} (const std\+::string \&\+\_\+shader\+Name, const ngl\+::\+Mat4 \&\+\_\+global\+Mat, ngl\+::\+Camera \&\+\_\+cam)
+\begin{DoxyCompactList}\small\item\em Method to load transform matrices to the shader. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_v_h_scene_a13167e9a975771835a90be852204c991}{Pause\+Animation} (bool \+\_\+pause)
+\begin{DoxyCompactList}\small\item\em Pause animation. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_v_h_scene_a2dff242957eee4796190dd1bf71b2b4e}{Backward\+Animation} ()\hypertarget{class_b_v_h_scene_a2dff242957eee4796190dd1bf71b2b4e}{}\label{class_b_v_h_scene_a2dff242957eee4796190dd1bf71b2b4e}
+
+\begin{DoxyCompactList}\small\item\em Plays animation backward. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_v_h_scene_a4df83466d8f033064a49f177cd6a496d}{Forward\+Animation} ()\hypertarget{class_b_v_h_scene_a4df83466d8f033064a49f177cd6a496d}{}\label{class_b_v_h_scene_a4df83466d8f033064a49f177cd6a496d}
+
+\begin{DoxyCompactList}\small\item\em Plays animation forward. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_v_h_scene_ad41ce515baef5d75819a228bf394aa2a}{Reset\+Animation} ()\hypertarget{class_b_v_h_scene_ad41ce515baef5d75819a228bf394aa2a}{}\label{class_b_v_h_scene_ad41ce515baef5d75819a228bf394aa2a}
+
+\begin{DoxyCompactList}\small\item\em Reset animation from start. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_v_h_scene_a564f9d05ae59bcbf826294a6e3aa1240}{Next\+Frame} ()\hypertarget{class_b_v_h_scene_a564f9d05ae59bcbf826294a6e3aa1240}{}\label{class_b_v_h_scene_a564f9d05ae59bcbf826294a6e3aa1240}
+
+\begin{DoxyCompactList}\small\item\em Shows next frame in animation. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_v_h_scene_a4e60ddbede691cfee5efe3fa6001936b}{Previous\+Frame} ()\hypertarget{class_b_v_h_scene_a4e60ddbede691cfee5efe3fa6001936b}{}\label{class_b_v_h_scene_a4e60ddbede691cfee5efe3fa6001936b}
+
+\begin{DoxyCompactList}\small\item\em Shows previous frame in animation. \end{DoxyCompactList}\item 
+float \hyperlink{class_b_v_h_scene_a0c771b1231d748914d926b6c97a2b803}{Get\+Frame\+Rate} () const\hypertarget{class_b_v_h_scene_a0c771b1231d748914d926b6c97a2b803}{}\label{class_b_v_h_scene_a0c771b1231d748914d926b6c97a2b803}
+
+\begin{DoxyCompactList}\small\item\em Returns animation frame rate. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_b_v_h_scene_aa676bf99ee729af78c743f11bbcb3511}{Get\+Tot\+Frames} () const\hypertarget{class_b_v_h_scene_aa676bf99ee729af78c743f11bbcb3511}{}\label{class_b_v_h_scene_aa676bf99ee729af78c743f11bbcb3511}
+
+\begin{DoxyCompactList}\small\item\em Returns total number of frames. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_b_v_h_scene_a998c310efe018f870af568080c802db2}{Get\+Current\+Frame} () const\hypertarget{class_b_v_h_scene_a998c310efe018f870af568080c802db2}{}\label{class_b_v_h_scene_a998c310efe018f870af568080c802db2}
+
+\begin{DoxyCompactList}\small\item\em Returns id of current frame. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_v_h_scene_a80ff1747afdd88e875cef343eb5c6095}{Set\+Current\+Motion} (const int \&\+\_\+current\+Motion)
+\begin{DoxyCompactList}\small\item\em Set current motion used. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_v_h_scene_af12c217beba32acb4db786a9f8a113ab}{Set\+Blending\+Options} (const unsigned int \&\+\_\+start\+Frame, const unsigned int \&\+\_\+end\+Frame, const unsigned int \&\+\_\+blend\+Range, const unsigned int \&\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Sets and apply smooth interpolation between frames. \end{DoxyCompactList}\item 
+std\+::vector$<$ unsigned int $>$ \hyperlink{class_b_v_h_scene_a0e2e1d5b042853755999c5d5cb0f7f68}{Check\+Blending\+Ready} ()\hypertarget{class_b_v_h_scene_a0e2e1d5b042853755999c5d5cb0f7f68}{}\label{class_b_v_h_scene_a0e2e1d5b042853755999c5d5cb0f7f68}
+
+\begin{DoxyCompactList}\small\item\em Allows to check if system is ready to perform interpolation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_character}{Character} \hyperlink{class_b_v_h_scene_ac79e4e47ccc7d4cc5059e29fac68971a}{m\+\_\+character}\hypertarget{class_b_v_h_scene_ac79e4e47ccc7d4cc5059e29fac68971a}{}\label{class_b_v_h_scene_ac79e4e47ccc7d4cc5059e29fac68971a}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_character}{Character} in the scene. \end{DoxyCompactList}\item 
+bool \hyperlink{class_b_v_h_scene_a1c0d3cab2a3cd3ac534536340c189ae1}{m\+\_\+paused}\hypertarget{class_b_v_h_scene_a1c0d3cab2a3cd3ac534536340c189ae1}{}\label{class_b_v_h_scene_a1c0d3cab2a3cd3ac534536340c189ae1}
+
+\begin{DoxyCompactList}\small\item\em Flag used to check if animation is paused. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{B\+V\+H\+Scene@{B\+V\+H\+Scene}!Draw@{Draw}}
+\index{Draw@{Draw}!B\+V\+H\+Scene@{B\+V\+H\+Scene}}
+\subsubsection[{\texorpdfstring{Draw(const ngl\+::\+Mat4 \&\+\_\+global\+Mat, ngl\+::\+Camera \&\+\_\+cam)}{Draw(const ngl::Mat4 \&\_globalMat, ngl::Camera \&\_cam)}}]{\setlength{\rightskip}{0pt plus 5cm}void B\+V\+H\+Scene\+::\+Draw (
+\begin{DoxyParamCaption}
+\item[{const ngl\+::\+Mat4 \&}]{\+\_\+global\+Mat, }
+\item[{ngl\+::\+Camera \&}]{\+\_\+cam}
+\end{DoxyParamCaption}
+)}\hypertarget{class_b_v_h_scene_a405f59e41378e5c758937281657947d9}{}\label{class_b_v_h_scene_a405f59e41378e5c758937281657947d9}
+
+
+Draw method for character in scene. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+global\+Mat} & Global transform \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+cam} & Camera \\
+\hline
+\end{DoxyParams}
+\index{B\+V\+H\+Scene@{B\+V\+H\+Scene}!Draw\+Floor@{Draw\+Floor}}
+\index{Draw\+Floor@{Draw\+Floor}!B\+V\+H\+Scene@{B\+V\+H\+Scene}}
+\subsubsection[{\texorpdfstring{Draw\+Floor(const ngl\+::\+Mat4 \&\+\_\+global\+Mat, ngl\+::\+Camera \&\+\_\+cam)}{DrawFloor(const ngl::Mat4 \&\_globalMat, ngl::Camera \&\_cam)}}]{\setlength{\rightskip}{0pt plus 5cm}void B\+V\+H\+Scene\+::\+Draw\+Floor (
+\begin{DoxyParamCaption}
+\item[{const ngl\+::\+Mat4 \&}]{\+\_\+global\+Mat, }
+\item[{ngl\+::\+Camera \&}]{\+\_\+cam}
+\end{DoxyParamCaption}
+)}\hypertarget{class_b_v_h_scene_ab01f9d83c1a35b25c9264ad92665522d}{}\label{class_b_v_h_scene_ab01f9d83c1a35b25c9264ad92665522d}
+
+
+Draw method for floor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+global\+Mat} & Global transform \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+cam} & Camera \\
+\hline
+\end{DoxyParams}
+\index{B\+V\+H\+Scene@{B\+V\+H\+Scene}!Load\+B\+V\+H\+File@{Load\+B\+V\+H\+File}}
+\index{Load\+B\+V\+H\+File@{Load\+B\+V\+H\+File}!B\+V\+H\+Scene@{B\+V\+H\+Scene}}
+\subsubsection[{\texorpdfstring{Load\+B\+V\+H\+File(const std\+::string \&\+\_\+path)}{LoadBVHFile(const std::string \&\_path)}}]{\setlength{\rightskip}{0pt plus 5cm}bool B\+V\+H\+Scene\+::\+Load\+B\+V\+H\+File (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{\+\_\+path}
+\end{DoxyParamCaption}
+)}\hypertarget{class_b_v_h_scene_aa9039eebbea8cbc0fef88323a7f8bd41}{}\label{class_b_v_h_scene_aa9039eebbea8cbc0fef88323a7f8bd41}
+
+
+Load .bvh file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+path} & Path to .bvh file \\
+\hline
+\end{DoxyParams}
+\index{B\+V\+H\+Scene@{B\+V\+H\+Scene}!Load\+Matrices\+To\+Shader@{Load\+Matrices\+To\+Shader}}
+\index{Load\+Matrices\+To\+Shader@{Load\+Matrices\+To\+Shader}!B\+V\+H\+Scene@{B\+V\+H\+Scene}}
+\subsubsection[{\texorpdfstring{Load\+Matrices\+To\+Shader(const std\+::string \&\+\_\+shader\+Name, const ngl\+::\+Mat4 \&\+\_\+global\+Mat, ngl\+::\+Camera \&\+\_\+cam)}{LoadMatricesToShader(const std::string \&\_shaderName, const ngl::Mat4 \&\_globalMat, ngl::Camera \&\_cam)}}]{\setlength{\rightskip}{0pt plus 5cm}void B\+V\+H\+Scene\+::\+Load\+Matrices\+To\+Shader (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{\+\_\+shader\+Name, }
+\item[{const ngl\+::\+Mat4 \&}]{\+\_\+global\+Mat, }
+\item[{ngl\+::\+Camera \&}]{\+\_\+cam}
+\end{DoxyParamCaption}
+)}\hypertarget{class_b_v_h_scene_aed67a997059b478b6088c353ec1d2b2b}{}\label{class_b_v_h_scene_aed67a997059b478b6088c353ec1d2b2b}
+
+
+Method to load transform matrices to the shader. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+shader\+Name} & Shader name \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+global\+Mat} & Global transform \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+cam} & Camera \\
+\hline
+\end{DoxyParams}
+\index{B\+V\+H\+Scene@{B\+V\+H\+Scene}!Pause\+Animation@{Pause\+Animation}}
+\index{Pause\+Animation@{Pause\+Animation}!B\+V\+H\+Scene@{B\+V\+H\+Scene}}
+\subsubsection[{\texorpdfstring{Pause\+Animation(bool \+\_\+pause)}{PauseAnimation(bool \_pause)}}]{\setlength{\rightskip}{0pt plus 5cm}void B\+V\+H\+Scene\+::\+Pause\+Animation (
+\begin{DoxyParamCaption}
+\item[{bool}]{\+\_\+pause}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_v_h_scene_a13167e9a975771835a90be852204c991}{}\label{class_b_v_h_scene_a13167e9a975771835a90be852204c991}
+
+
+Pause animation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+pause} & \\
+\hline
+\end{DoxyParams}
+\index{B\+V\+H\+Scene@{B\+V\+H\+Scene}!Set\+Blending\+Options@{Set\+Blending\+Options}}
+\index{Set\+Blending\+Options@{Set\+Blending\+Options}!B\+V\+H\+Scene@{B\+V\+H\+Scene}}
+\subsubsection[{\texorpdfstring{Set\+Blending\+Options(const unsigned int \&\+\_\+start\+Frame, const unsigned int \&\+\_\+end\+Frame, const unsigned int \&\+\_\+blend\+Range, const unsigned int \&\+\_\+type)}{SetBlendingOptions(const unsigned int \&\_startFrame, const unsigned int \&\_endFrame, const unsigned int \&\_blendRange, const unsigned int \&\_type)}}]{\setlength{\rightskip}{0pt plus 5cm}void B\+V\+H\+Scene\+::\+Set\+Blending\+Options (
+\begin{DoxyParamCaption}
+\item[{const unsigned int \&}]{\+\_\+start\+Frame, }
+\item[{const unsigned int \&}]{\+\_\+end\+Frame, }
+\item[{const unsigned int \&}]{\+\_\+blend\+Range, }
+\item[{const unsigned int \&}]{\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{class_b_v_h_scene_af12c217beba32acb4db786a9f8a113ab}{}\label{class_b_v_h_scene_af12c217beba32acb4db786a9f8a113ab}
+
+
+Sets and apply smooth interpolation between frames. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+start\+Frame} & Start frame number from Animation 1 \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+end\+Frame} & End frame number from Animation 2 \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+blend\+Range} & Range of frames where to perform interpolation \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+type} & Blend type (cubic or slerp) \\
+\hline
+\end{DoxyParams}
+\index{B\+V\+H\+Scene@{B\+V\+H\+Scene}!Set\+Current\+Motion@{Set\+Current\+Motion}}
+\index{Set\+Current\+Motion@{Set\+Current\+Motion}!B\+V\+H\+Scene@{B\+V\+H\+Scene}}
+\subsubsection[{\texorpdfstring{Set\+Current\+Motion(const int \&\+\_\+current\+Motion)}{SetCurrentMotion(const int \&\_currentMotion)}}]{\setlength{\rightskip}{0pt plus 5cm}void B\+V\+H\+Scene\+::\+Set\+Current\+Motion (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{\+\_\+current\+Motion}
+\end{DoxyParamCaption}
+)}\hypertarget{class_b_v_h_scene_a80ff1747afdd88e875cef343eb5c6095}{}\label{class_b_v_h_scene_a80ff1747afdd88e875cef343eb5c6095}
+
+
+Set current motion used. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+current\+Motion} & \hyperlink{class_motion}{Motion} type\+: (0, motion1) (1, motion2) (2, motion3) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_b_v_h_scene_8h}{B\+V\+H\+Scene.\+h}\end{DoxyCompactItemize}

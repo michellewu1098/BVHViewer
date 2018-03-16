@@ -1,0 +1,70 @@
+\hypertarget{struct_joint}{}\section{Joint Struct Reference}
+\label{struct_joint}\index{Joint@{Joint}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_joint_a79a7a4715b2166714e039d7c7c5ea3b4}{Joint} ()\hypertarget{struct_joint_a79a7a4715b2166714e039d7c7c5ea3b4}{}\label{struct_joint_a79a7a4715b2166714e039d7c7c5ea3b4}
+
+\begin{DoxyCompactList}\small\item\em Ctor. \end{DoxyCompactList}\item 
+\hyperlink{struct_joint_a42aca0bd1832136984923713127c28f1}{$\sim$\+Joint} ()\hypertarget{struct_joint_a42aca0bd1832136984923713127c28f1}{}\label{struct_joint_a42aca0bd1832136984923713127c28f1}
+
+\begin{DoxyCompactList}\small\item\em Dtor. \end{DoxyCompactList}\item 
+void \hyperlink{struct_joint_abe1503153ea6ccc3f657e7ddca30e48b}{init\+Frame\+Data\+Storage} (const unsigned int \&\+\_\+n\+Frames)
+\begin{DoxyCompactList}\small\item\em Initialise frame storage data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{struct_joint_a8e18a6ff656bcf26a85311ab5f57162a}{m\+\_\+name}\hypertarget{struct_joint_a8e18a6ff656bcf26a85311ab5f57162a}{}\label{struct_joint_a8e18a6ff656bcf26a85311ab5f57162a}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_joint}{Joint} name. \end{DoxyCompactList}\item 
+ngl\+::\+Vec3 \hyperlink{struct_joint_a3256ef7fd0c451027678eb2c496de910}{m\+\_\+offset}\hypertarget{struct_joint_a3256ef7fd0c451027678eb2c496de910}{}\label{struct_joint_a3256ef7fd0c451027678eb2c496de910}
+
+\begin{DoxyCompactList}\small\item\em Offset of joint from parent. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{struct_joint}{Joint} $>$ $>$ \hyperlink{struct_joint_a73c03b295b912008537b469709ec97e8}{m\+\_\+children}\hypertarget{struct_joint_a73c03b295b912008537b469709ec97e8}{}\label{struct_joint_a73c03b295b912008537b469709ec97e8}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_joint}{Joint}\textquotesingle{}s children. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{struct_joint_a6f82de576c221aadc4f429ab0144de84}{m\+\_\+num\+Channels}\hypertarget{struct_joint_a6f82de576c221aadc4f429ab0144de84}{}\label{struct_joint_a6f82de576c221aadc4f429ab0144de84}
+
+\begin{DoxyCompactList}\small\item\em Number of channels. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{struct_joint_a8e564309dc873b82e2883e37f628a847}{m\+\_\+rotation\+Order} \mbox{[}3\mbox{]}\hypertarget{struct_joint_a8e564309dc873b82e2883e37f628a847}{}\label{struct_joint_a8e564309dc873b82e2883e37f628a847}
+
+\begin{DoxyCompactList}\small\item\em Rotation order. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{struct_joint_a1cde67c8162c77ab2473490a83ef25ad}{m\+\_\+translation\+Order} \mbox{[}3\mbox{]}\hypertarget{struct_joint_a1cde67c8162c77ab2473490a83ef25ad}{}\label{struct_joint_a1cde67c8162c77ab2473490a83ef25ad}
+
+\begin{DoxyCompactList}\small\item\em Root translation order. \end{DoxyCompactList}\item 
+ngl\+::\+Mat4 \hyperlink{struct_joint_ac91e46f8eb9e481d5899bb1b0750c726}{m\+\_\+transform}\hypertarget{struct_joint_ac91e46f8eb9e481d5899bb1b0750c726}{}\label{struct_joint_ac91e46f8eb9e481d5899bb1b0750c726}
+
+\begin{DoxyCompactList}\small\item\em Local transformation matrix. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{struct_joint}{Joint} $>$ \hyperlink{struct_joint_afaa8a0a853821e77f9388b9fcab01ce3}{m\+\_\+parent}\hypertarget{struct_joint_afaa8a0a853821e77f9388b9fcab01ce3}{}\label{struct_joint_afaa8a0a853821e77f9388b9fcab01ce3}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_joint}{Joint}\textquotesingle{}s parent. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{struct_joint_a325d56db900122a3449a4a06a0da9214}{m\+\_\+id}\hypertarget{struct_joint_a325d56db900122a3449a4a06a0da9214}{}\label{struct_joint_a325d56db900122a3449a4a06a0da9214}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_joint}{Joint} id. \end{DoxyCompactList}\item 
+ngl\+::\+Vec3 $\ast$ \hyperlink{struct_joint_ae1f10dc85083c3e80c9c24389033e2cb}{m\+\_\+frame\+Data\+Storage}\hypertarget{struct_joint_ae1f10dc85083c3e80c9c24389033e2cb}{}\label{struct_joint_ae1f10dc85083c3e80c9c24389033e2cb}
+
+\begin{DoxyCompactList}\small\item\em Store the vertex data for every frame in animation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Joint@{Joint}!init\+Frame\+Data\+Storage@{init\+Frame\+Data\+Storage}}
+\index{init\+Frame\+Data\+Storage@{init\+Frame\+Data\+Storage}!Joint@{Joint}}
+\subsubsection[{\texorpdfstring{init\+Frame\+Data\+Storage(const unsigned int \&\+\_\+n\+Frames)}{initFrameDataStorage(const unsigned int \&\_nFrames)}}]{\setlength{\rightskip}{0pt plus 5cm}void Joint\+::init\+Frame\+Data\+Storage (
+\begin{DoxyParamCaption}
+\item[{const unsigned int \&}]{\+\_\+n\+Frames}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{struct_joint_abe1503153ea6ccc3f657e7ddca30e48b}{}\label{struct_joint_abe1503153ea6ccc3f657e7ddca30e48b}
+
+
+Initialise frame storage data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+n\+Frames} & Number of frames \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_joint_8h}{Joint.\+h}\end{DoxyCompactItemize}

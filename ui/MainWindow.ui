@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>972</width>
+    <height>656</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>BVH Viewer</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="s_mainWindowGridLayout">
+    <item row="1" column="0">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="0">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>55</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>File</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <widget class="QPushButton" name="m_loadButton">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>22</y>
+         <width>51</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="../bvhresources.qrc">
+         <normaloff>:/icons/icons/load.png</normaloff>:/icons/icons/load.png</iconset>
+       </property>
+      </widget>
+      <widget class="Line" name="line">
+       <property name="geometry">
+        <rect>
+         <x>45</x>
+         <y>20</y>
+         <width>16</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="m_playButton">
+       <property name="geometry">
+        <rect>
+         <x>760</x>
+         <y>22</y>
+         <width>51</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="../bvhresources.qrc">
+         <normaloff>:/icons/icons/play.png</normaloff>:/icons/icons/play.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="m_pauseButton">
+       <property name="geometry">
+        <rect>
+         <x>805</x>
+         <y>22</y>
+         <width>51</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="../bvhresources.qrc">
+         <normaloff>:/icons/icons/pause.png</normaloff>:/icons/icons/pause.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="m_backwardButton">
+       <property name="geometry">
+        <rect>
+         <x>715</x>
+         <y>22</y>
+         <width>51</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="../bvhresources.qrc">
+         <normaloff>:/icons/icons/backward.png</normaloff>:/icons/icons/backward.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="m_forwardButton">
+       <property name="geometry">
+        <rect>
+         <x>850</x>
+         <y>22</y>
+         <width>51</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="../bvhresources.qrc">
+         <normaloff>:/icons/icons/forward.png</normaloff>:/icons/icons/forward.png</iconset>
+       </property>
+      </widget>
+      <widget class="QLabel" name="m_filename">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>27</y>
+         <width>191</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>27</y>
+         <width>81</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Current File:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="m_fileMenu">
+       <property name="geometry">
+        <rect>
+         <x>375</x>
+         <y>24</y>
+         <width>151</width>
+         <height>26</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="m_prevFrameButton">
+       <property name="geometry">
+        <rect>
+         <x>670</x>
+         <y>22</y>
+         <width>51</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="../bvhresources.qrc">
+         <normaloff>:/icons/icons/previous.png</normaloff>:/icons/icons/previous.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="m_nextFrameButton">
+       <property name="geometry">
+        <rect>
+         <x>895</x>
+         <y>22</y>
+         <width>51</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="../bvhresources.qrc">
+         <normaloff>:/icons/icons/next.png</normaloff>:/icons/icons/next.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="m_blendButton">
+       <property name="geometry">
+        <rect>
+         <x>525</x>
+         <y>22</y>
+         <width>101</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Interpolate</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="m_resetAnimation">
+       <property name="geometry">
+        <rect>
+         <x>625</x>
+         <y>22</y>
+         <width>51</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="../bvhresources.qrc">
+         <normaloff>:/icons/icons/reset.png</normaloff>:/icons/icons/reset.png</iconset>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>972</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="../bvhresources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
